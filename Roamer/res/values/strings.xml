@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Roamer</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="intro_image_desc">Intro Image!</string>
+    <string name="credit_tag">by Anywhere but here! Designs</string>
+    <string name="find_roamer">Find Roamer</string>
+    <string name="send_message">Send Out Message</string>
+    <string name="check_inbox">Check Inbox</string>
+    <string name="set_location">Set Location</string>
+
+</resources>
