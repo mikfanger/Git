@@ -1,6 +1,6 @@
 package com.example.roamer;
 
-import android.R;
+import com.example.roamer.*;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
