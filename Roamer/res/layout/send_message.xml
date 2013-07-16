@@ -9,55 +9,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SendMessage" >
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/checkBox4"
-        android:layout_alignLeft="@+id/checkBox4"
-        android:text="Looking to grab a drink, who else is in?"
-        android:textSize="10sp" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/CheckInboxButton"
-        android:layout_alignBottom="@+id/CheckInboxButton"
-        android:layout_toRightOf="@+id/BackFromSend"
-        android:text="Getting some food, join me if you can.  I&apos;ll be at"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/SendMessageButton"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_above="@+id/checkBox2"
-        android:layout_marginLeft="51dp"
-        android:layout_toRightOf="@+id/checkBox4"
-        android:background="@drawable/btn_blue"
-        android:text="Send"
-        android:textSize="10sp" />
-
     <Button
         android:id="@+id/CheckInboxButton"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
+        android:layout_width="52dp"
+        android:layout_height="33dp"
         android:layout_alignLeft="@+id/SendMessageButton"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
         android:background="@drawable/btn_blue"
-        android:text="Inbox"
-        android:textSize="10sp" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/SendMessageButton"
-        android:layout_alignLeft="@+id/checkBox1"
-        android:text="I&apos;ll be out tonight at"
-        android:textSize="10sp" />
+        android:minHeight="55dp"
+        android:text="@string/check_inbox_button"
+        android:textSize="12sp" />
 
     <ImageButton
         android:id="@+id/BackFromSend"
@@ -71,13 +33,55 @@
         android:contentDescription="@string/credit_tag"
         android:src="@android:drawable/ic_menu_revert" />
 
+    <Button
+        android:id="@+id/SendMessageButton"
+        android:layout_width="50dp"
+        android:layout_height="33dp"
+        android:layout_above="@+id/checkBox2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="46dp"
+        android:background="@drawable/btn_blue"
+        android:minHeight="55dp"
+        android:text="@string/send_message_button"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CheckInboxButton"
+        android:layout_alignLeft="@+id/checkBox3"
+        android:layout_marginBottom="14dp"
+        android:text="@string/grab_a_drink"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/CheckInboxButton"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_marginBottom="16dp"
+        android:text="@string/getting_food"
+        android:textSize="12sp" />
+
     <CheckBox
         android:id="@+id/checkBox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/checkBox3"
-        android:layout_toRightOf="@+id/BackFromSend"
-        android:text="Anyone around? I&apos;m in"
-        android:textSize="10sp" />
+        android:layout_alignLeft="@+id/BackFromSend"
+        android:layout_marginTop="75dp"
+        android:text="@string/anyone_around"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkBox2"
+        android:layout_alignLeft="@+id/checkBox1"
+        android:text="@string/out_tonight"
+        android:textSize="12sp" />
 
 </RelativeLayout>

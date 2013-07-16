@@ -21,7 +21,7 @@ public class IntroActivity extends Activity {
             @Override
             public void onClick(View v) {
             	
-            	setContentView(R.layout.send_message);
+            	setContentView(R.layout.activity_main);
             }
         });
     }
