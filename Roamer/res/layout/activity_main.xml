@@ -15,8 +15,9 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:scaleType="fitCenter"
+        android:background="@style/AppTheme"
         android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
         android:src="@drawable/back_arrow2" />
 
     <ImageButton
@@ -25,22 +26,23 @@
         android:layout_height="50dp"
         android:layout_alignLeft="@+id/BackIntroButton"
         android:layout_alignParentTop="true"
-        android:scaleType="fitCenter"
+        android:background="@style/AppTheme"
         android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
         android:src="@drawable/exit_icon" />
 
     <ImageButton
         android:id="@+id/SendMessageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageButton1"
+        android:layout_alignTop="@+id/BackFromSend"
         android:layout_marginRight="22dp"
         android:layout_toLeftOf="@+id/ExitButtonMain"
         android:contentDescription="@string/app_name"
         android:src="@android:drawable/ic_dialog_map" />
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/BackFromSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageButton3"
@@ -74,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView2"
         android:layout_alignBottom="@+id/textView2"
-        android:layout_alignLeft="@+id/imageButton1"
+        android:layout_alignLeft="@+id/BackFromSend"
         android:text="@string/check_inbox"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -84,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/imageButton1"
+        android:layout_toRightOf="@+id/BackFromSend"
         android:text="@string/set_location"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -107,5 +109,15 @@
         android:layout_toRightOf="@+id/textView1"
         android:contentDescription="@string/app_name"
         android:src="@android:drawable/ic_menu_send" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/BackIntroButton"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/textView1"
+        android:background="@style/AppTheme"
+        android:src="@android:drawable/ic_menu_preferences" />
 
 </RelativeLayout>

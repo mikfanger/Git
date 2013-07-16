@@ -29,14 +29,15 @@ public class HomeScreenActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         
-        ImageButton backIntroButton = (ImageButton) findViewById(R.id.BackIntroButton);
-        backIntroButton.setOnClickListener(new OnClickListener() {
+        ImageButton backButton = (ImageButton) findViewById(R.id.BackIntroButton);
+        backButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
             	
             	setContentView(R.layout.intro_screen);
             }
         });
+
         
         ImageButton sendButton = (ImageButton) findViewById(R.id.SendMessageButton);
         sendButton.setOnClickListener(new OnClickListener() {

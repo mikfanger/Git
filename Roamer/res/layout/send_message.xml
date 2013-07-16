@@ -7,39 +7,77 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".HomeScreenActivity" >
+    tools:context=".SendMessage" >
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox1"
-        android:layout_below="@+id/checkBox1"
-        android:text="CheckBox" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox1"
-        android:layout_alignParentTop="true"
-        android:text="CheckBox" />
-
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/checkBox3"
-        android:layout_marginLeft="95dp"
-        android:text="CheckBox" />
+        android:layout_above="@+id/checkBox4"
+        android:layout_alignLeft="@+id/checkBox4"
+        android:text="Looking to grab a drink, who else is in?"
+        android:textSize="10sp" />
 
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox2"
-        android:layout_below="@+id/checkBox2"
-        android:text="CheckBox" />
+        android:layout_alignBaseline="@+id/CheckInboxButton"
+        android:layout_alignBottom="@+id/CheckInboxButton"
+        android:layout_toRightOf="@+id/BackFromSend"
+        android:text="Getting some food, join me if you can.  I&apos;ll be at"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/SendMessageButton"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/checkBox2"
+        android:layout_marginLeft="51dp"
+        android:layout_toRightOf="@+id/checkBox4"
+        android:background="@drawable/btn_blue"
+        android:text="Send"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/CheckInboxButton"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/SendMessageButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_blue"
+        android:text="Inbox"
+        android:textSize="10sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/SendMessageButton"
+        android:layout_alignLeft="@+id/checkBox1"
+        android:text="I&apos;ll be out tonight at"
+        android:textSize="10sp" />
+
+    <ImageButton
+        android:id="@+id/BackFromSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="30dp"
+        android:background="@style/AppTheme"
+        android:contentDescription="@string/credit_tag"
+        android:src="@android:drawable/ic_menu_revert" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkBox3"
+        android:layout_toRightOf="@+id/BackFromSend"
+        android:text="Anyone around? I&apos;m in"
+        android:textSize="10sp" />
 
 </RelativeLayout>

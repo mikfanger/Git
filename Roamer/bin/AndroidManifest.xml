@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.roamer"
-    android:versionCode="1"
-    android:versionName="1.0" 
+    android:configChanges="keyboardHidden|orientation|screenSize"
     android:screenOrientation="landscape"
-    android:configChanges="keyboardHidden|orientation|screenSize">
+    android:versionCode="1"
+    android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <application
@@ -24,6 +24,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.roamer.HomeScreenActivity"
+            android:label="@string/home_title_string"
+            android:parentActivityName="com.example.roamer.HomeScreenActivity" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.example.roamer.HomeScreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.roamer.HomeScreenActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.roamer.PersonListActivity"
+            android:label="@string/title_person_list" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.PersonDetailActivity"
+            android:label="@string/title_person_detail"
+            android:parentActivityName=".PersonListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PersonListActivity" />
+        </activity>
+        
+        <service android:name="com.android.email.ACCOUNT_INTENT" >
+        </service>
     </application>
 
 </manifest>

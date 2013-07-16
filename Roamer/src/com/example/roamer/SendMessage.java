@@ -3,6 +3,9 @@ package com.example.roamer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 
 public class SendMessage extends Activity {
 
@@ -11,6 +14,15 @@ public class SendMessage extends Activity {
     	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.send_message);
+        
+        ImageButton backButton = (ImageButton) findViewById(R.id.BackFromSend);
+        backButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	
+            	setContentView(R.layout.activity_main);
+            }
+        });
 
     }
  

@@ -1,6 +1,5 @@
 package com.example.roamer;
 
-import com.example.roamer.*;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -22,7 +21,7 @@ public class IntroActivity extends Activity {
             @Override
             public void onClick(View v) {
             	
-            	setContentView(R.layout.activity_main);
+            	setContentView(R.layout.send_message);
             }
         });
     }
