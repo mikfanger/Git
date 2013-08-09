@@ -15,9 +15,16 @@
     <string name="title_person_detail">Person Detail</string>
     <string name="send_message_button">Send</string>
     <string name="check_inbox_button">Inbox</string>
-    <string name="anyone_around">Anyone around? I'm In.</string>
-    <string name="out_tonight">I'll be out tonight at</string>
-    <string name="grab_a_drink">I'd like to grab a drink, who's in?</string>
-    <string name="getting_food">Getting some food, join me if you can.  I'll  be at</string>
+    <string name="anyone_around">Anyone around? I\'m In.</string>
+    <string name="out_tonight">I\'ll be out tonight at</string>
+    <string name="grab_a_drink">I\'d like to grab a drink, who\'s in?</string>
+    <string name="getting_food">Getting some food, join me if you can.  I\'ll  be at</string>
+    <string name="title_send_message">Send Message</string>
+    <string name="login_execute">Log in!</string>
+    <string name="new_user">Create New Profile</string>
+    <string name="title_activity_explaination">What is Roamer?</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
 
 </resources>

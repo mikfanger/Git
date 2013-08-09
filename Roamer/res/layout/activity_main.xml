@@ -8,17 +8,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".HomeScreenActivity" >
-
+    
     <ImageButton
         android:id="@+id/BackIntroButton"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@style/AppTheme"
         android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"
-        android:src="@drawable/back_arrow2" />
+        android:src="@drawable/back_arrow2"
+        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/ExitButtonMain"
@@ -26,13 +26,12 @@
         android:layout_height="50dp"
         android:layout_alignLeft="@+id/BackIntroButton"
         android:layout_alignParentTop="true"
-        android:background="@style/AppTheme"
         android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"
         android:src="@drawable/exit_icon" />
 
     <ImageButton
-        android:id="@+id/SendMessageButton"
+        android:id="@+id/SetLocationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/BackFromSend"
@@ -41,32 +40,13 @@
         android:contentDescription="@string/app_name"
         android:src="@android:drawable/ic_dialog_map" />
 
-    <ImageButton
-        android:id="@+id/BackFromSend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageButton3"
-        android:layout_marginRight="38dp"
-        android:layout_toLeftOf="@+id/SendMessageButton"
-        android:contentDescription="@string/app_name"
-        android:src="@android:drawable/ic_dialog_email" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageButton3"
-        android:layout_centerVertical="true"
-        android:text="@string/send_message"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView2"
         android:layout_alignBottom="@+id/textView2"
-        android:layout_alignLeft="@+id/imageButton4"
+        android:layout_alignLeft="@+id/findRoamers"
         android:text="@string/find_roamer"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -80,44 +60,63 @@
         android:text="@string/check_inbox"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/BackIntroButton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="26dp"
+        android:contentDescription="@string/intro_image_desc"
+        android:src="@android:drawable/ic_menu_preferences" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/BackFromSend"
+        android:layout_alignLeft="@+id/SetLocationButton"
+        android:layout_centerVertical="true"
         android:text="@string/set_location"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/BackFromSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ExitButtonMain"
-        android:layout_marginLeft="50dp"
+        android:layout_alignTop="@+id/sendMessageButton"
+        android:layout_marginRight="34dp"
+        android:layout_toLeftOf="@+id/SetLocationButton"
+        android:contentDescription="@string/app_name"
+        android:src="@android:drawable/ic_dialog_email" />
+
+    <ImageButton
+        android:id="@+id/findRoamers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/settingsButton"
+        android:layout_alignTop="@+id/sendMessageButton"
+        android:layout_marginLeft="21dp"
         android:contentDescription="@string/app_name"
         android:src="@android:drawable/ic_menu_view" />
 
-    <ImageButton
-        android:id="@+id/imageButton3"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ExitButtonMain"
-        android:layout_marginLeft="14dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:contentDescription="@string/app_name"
-        android:src="@android:drawable/ic_menu_send" />
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/textView3"
+        android:text="@string/send_message"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/sendMessageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/BackIntroButton"
-        android:layout_marginRight="15dp"
-        android:layout_toLeftOf="@+id/textView1"
-        android:background="@style/AppTheme"
-        android:src="@android:drawable/ic_menu_preferences" />
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/ExitButtonMain"
+        android:contentDescription="@string/app_name"
+        android:src="@android:drawable/ic_menu_send" />
 
 </RelativeLayout>

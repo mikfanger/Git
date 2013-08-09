@@ -2,10 +2,10 @@ package com.example.roamer;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-//import android.widget.Button;
 import android.widget.ImageButton;
 
 public class IntroActivity extends Activity {
@@ -21,11 +21,11 @@ public class IntroActivity extends Activity {
             @Override
             public void onClick(View v) {
             	
-            	setContentView(R.layout.activity_main);
+            	Intent i=new Intent(IntroActivity.this,LoginActivity.class);
+                startActivity(i);
             }
         });
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -33,5 +33,6 @@ public class IntroActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
     
 }
