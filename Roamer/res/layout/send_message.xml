@@ -7,13 +7,13 @@
     tools:context=".SendMessage" >
         
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/fillLocation"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/checkBox1"
         android:layout_toRightOf="@+id/checkBox1"
         android:ems="10"
-        android:hint="Fill in Location">
+        android:hint="@string/fill_location" >
 	
         <requestFocus />
     </EditText>
@@ -52,7 +52,7 @@
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/email"
+        android:layout_above="@+id/fillLocation"
         android:layout_alignLeft="@+id/checkBox3"
         android:checkableBehavior="single"
         android:text="@string/grab_a_drink" />

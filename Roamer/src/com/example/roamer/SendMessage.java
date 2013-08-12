@@ -56,10 +56,11 @@ public class SendMessage extends Activity {
                  
             	Intent i=new Intent(SendMessage.this,HomeScreenActivity.class);
                 startActivity(i);
+                
             }
         });
         
-        Button inboxButton = (Button) findViewById(R.id.StartRoamerButton);
+        Button inboxButton = (Button) findViewById(R.id.inboxButton);
         inboxButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
