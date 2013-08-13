@@ -30,4 +30,10 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>CATERNET_GIT</name>
+			<value>file:/C:/CATERNET/Verena%20Solutions/Roamer</value>
+		</variable>
+	</variableList>
 </projectDescription>
