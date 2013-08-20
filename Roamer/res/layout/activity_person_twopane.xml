@@ -18,7 +18,7 @@
     this two-pane version.
 
     For more on layout aliases, see:
-    http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
+    http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
     -->
 
     <fragment
@@ -34,9 +34,8 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.50" >
-
     </FrameLayout>
-    
+
     <FrameLayout
         android:id="@+id/city_picture_container"
         android:layout_width="0dp"
@@ -48,7 +47,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/chicago_cartoon" />
-
     </FrameLayout>
 
 </LinearLayout>

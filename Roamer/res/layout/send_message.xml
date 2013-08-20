@@ -5,7 +5,7 @@
     android:background="@drawable/message_background"
     android:contentDescription="@string/credit_tag"
     tools:context=".SendMessage" >
-        
+
     <EditText
         android:id="@+id/fillLocation"
         android:layout_width="175dp"
@@ -14,7 +14,7 @@
         android:layout_toRightOf="@+id/checkBox1"
         android:ems="10"
         android:hint="@string/fill_location" >
-	
+
         <requestFocus />
     </EditText>
 
@@ -56,7 +56,6 @@
         android:layout_alignLeft="@+id/checkBox3"
         android:checkableBehavior="single"
         android:text="@string/grab_a_drink" />
-    
 
     <Button
         android:id="@+id/SendButton"

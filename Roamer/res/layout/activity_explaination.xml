@@ -9,17 +9,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ExplainationActivity" >
 
-    <ImageButton
-        android:id="@+id/imageButton1"
+    <ImageView
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
-        android:background_width="20dp"
-        android:background_height="20dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="41dp"
-        android:layout_marginLeft="44dp"
-        android:background="@drawable/rounded_corners"
-        android:src="@drawable/forward_button_blue"/>
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/luggage_tag_blank" />
 
 </RelativeLayout>

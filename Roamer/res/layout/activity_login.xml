@@ -7,11 +7,11 @@
     tools:context=".LoginActivity" >
 
     <ScrollView
-    android:id="@+id/login_form"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-  
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
     </ScrollView>
+
     <EditText
         android:id="@+id/fillLocation"
         android:layout_width="wrap_content"
@@ -42,37 +42,37 @@
         android:minHeight="55dp"
         android:text="@string/login_execute"
         android:textSize="12sp" />
-    
-     <Button
-         android:id="@+id/newUser"
-         android:layout_width="wrap_content"
-         android:layout_height="33dp"
-         android:layout_x="350dp"
-         android:layout_y="130dp"
-         android:background="@drawable/btn_green"
-         android:minHeight="55dp"
-         android:text="@string/new_user"
-         android:textSize="12sp" />
-    
-     <TextView
-         android:id="@+id/textView1"
-         android:layout_width="193dp"
-         android:layout_height="wrap_content"
-         android:layout_x="13dp"
-         android:layout_y="70dp"
-         android:text="Already a Roamer? Enter your cridentials."
-         android:textAppearance="?android:attr/textAppearanceMedium" />
-     
-      <TextView
-          android:id="@+id/newRoamer"
-          android:layout_width="166dp"
-          android:layout_height="wrap_content"
-          android:layout_x="350dp"
-          android:layout_y="70dp"
-          android:text="Not yet a Roamer?   Start here."
-          android:textAppearance="?android:attr/textAppearanceMedium" />
-    
-     <LinearLayout
+
+    <Button
+        android:id="@+id/newUser"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_x="350dp"
+        android:layout_y="130dp"
+        android:background="@drawable/btn_green"
+        android:minHeight="55dp"
+        android:text="@string/new_user"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:layout_x="13dp"
+        android:layout_y="70dp"
+        android:text="Already a Roamer? Enter your cridentials."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/newRoamer"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_x="350dp"
+        android:layout_y="70dp"
+        android:text="Not yet a Roamer?   Start here."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
         android:id="@+id/login_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,8 +86,8 @@
             style="?android:attr/progressBarStyleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_x="200dp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:layout_x="200dp" />
 
         <TextView
             android:id="@+id/login_status_message"
@@ -99,7 +99,5 @@
             android:text="@string/login_progress_signing_in"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
-
-
 
 </AbsoluteLayout>
