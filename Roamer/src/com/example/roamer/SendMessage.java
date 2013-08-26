@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
@@ -25,6 +26,7 @@ public class SendMessage extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
     	
         super.onCreate(savedInstanceState);
+        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.send_message);
            
         Button backButton = (Button) findViewById(R.id.SendButton);

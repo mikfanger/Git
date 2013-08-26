@@ -2,7 +2,7 @@
 
     <!--
          A 'parent' preference, which enables/disables child preferences (below)
-         when checked/unchecked.
+         when checked/unchecked.
     -->
     <CheckBoxPreference
         android:defaultValue="true"

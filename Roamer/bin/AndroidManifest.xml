@@ -68,6 +68,10 @@
             android:name="com.example.roamer.ExplainationActivity"
             android:label="@string/title_activity_explaination" >
         </activity>
+        <activity
+            android:name="com.example.roamer.CreateAccountActivity"
+            android:label="@string/title_activity_create_account" >
+        </activity>
     </application>
 
 </manifest>

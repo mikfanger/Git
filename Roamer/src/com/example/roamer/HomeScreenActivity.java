@@ -4,6 +4,7 @@ package com.example.roamer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Point;
 import android.view.Menu;
 import android.view.View;
@@ -20,6 +21,7 @@ public class HomeScreenActivity extends Activity {
     	
 
         super.onCreate(savedInstanceState);
+        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_main);
         
         ImageButton backButton = (ImageButton) findViewById(R.id.BackIntroButton);

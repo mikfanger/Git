@@ -3,6 +3,7 @@ package com.example.roamer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,6 +15,7 @@ public class IntroActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
     	
         super.onCreate(savedInstanceState);
+        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.intro_screen);
         
         ImageButton introButton = (ImageButton) findViewById(R.id.StartRoamerButton);
