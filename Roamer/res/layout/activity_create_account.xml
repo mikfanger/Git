@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/settings_background" >
+
+    <Button
+        android:id="@+id/submitInfo"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="12dp"
+        android:layout_y="198dp"
+        android:background="@drawable/btn_blue"
+        android:text="@string/continue_button" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="322dp"
+        android:layout_y="142dp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_x="322dp"
+        android:layout_y="96dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="162dp"
         android:layout_height="42dp"
-        android:layout_x="22dp"
-        android:layout_y="11dp"
+        android:layout_x="165dp"
+        android:layout_y="13dp"
         android:text="Let&apos;s start with the basics..."
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -16,38 +44,20 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="243dp"
-        android:layout_y="22dp"
-        android:text="First Name"
+        android:layout_x="210dp"
+        android:layout_y="102dp"
+        android:text="First Name?"
+        android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="118dp"
-        android:layout_height="wrap_content"
-        android:layout_x="330dp"
-        android:layout_y="17dp"
-        android:ems="10"
-        android:hint="name"
-        android:inputType="textPersonName" >
-
-        <requestFocus />
-    </EditText>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="84dp"
         android:layout_height="45dp"
-        android:layout_x="243dp"
-        android:layout_y="71dp"
+        android:layout_x="210dp"
+        android:layout_y="132dp"
         android:text="Where are you from?"
+        android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="334dp"
-        android:layout_y="65dp" />
 
 </AbsoluteLayout>
