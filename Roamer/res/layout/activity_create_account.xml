@@ -4,16 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/settings_background" >
 
-    <Button
-        android:id="@+id/submitInfo"
-        style="@style/AppTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="12dp"
-        android:layout_y="198dp"
-        android:background="@drawable/btn_blue"
-        android:text="@string/continue_button" />
-
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="wrap_content"
@@ -59,5 +49,13 @@
         android:text="Where are you from?"
         android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageButton
+        android:id="@+id/submitInfo"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_x="24dp"
+        android:layout_y="172dp"
+        android:background="@drawable/next" />
 
 </AbsoluteLayout>

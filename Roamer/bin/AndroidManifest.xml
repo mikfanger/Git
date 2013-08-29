@@ -72,6 +72,10 @@
             android:name="com.example.roamer.CreateAccountActivity"
             android:label="@string/title_activity_create_account" >
         </activity>
+        <activity
+            android:name="com.example.roamer.CreateAccountActivity2"
+            android:label="@string/title_activity_create_account_activity2" >
+        </activity>
     </application>
 
 </manifest>

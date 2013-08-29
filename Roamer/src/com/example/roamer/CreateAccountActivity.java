@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 
@@ -22,12 +22,12 @@ public class CreateAccountActivity extends Activity {
         this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_create_account);
         
-        Button introButton = (Button) findViewById(R.id.submitInfo);
+        ImageButton introButton = (ImageButton) findViewById(R.id.submitInfo);
         introButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
             	
-            	Intent i=new Intent(CreateAccountActivity.this,HomeScreenActivity.class);
+            	Intent i=new Intent(CreateAccountActivity.this,CreateAccountActivity2.class);
                 startActivity(i);
             }
         });
@@ -35,10 +35,12 @@ public class CreateAccountActivity extends Activity {
         Spinner s = (Spinner) findViewById(R.id.spinner1);
         //Prepar adapter 
         //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
-        final MyData items[] = new MyData[3];
-        items[0] = new MyData("North", "value1");
-        items[1] = new MyData("South", "value2");
-        items[2] = new MyData("East", "value3");
+        final MyData items[] = new MyData[5];
+        items[0] = new MyData("Northeast", "value1");
+        items[1] = new MyData("Northwest", "value2");
+        items[2] = new MyData("Southeast", "value3");
+        items[3] = new MyData("Southwest", "value2");
+        items[4] = new MyData("Midwest", "value3");
         ArrayAdapter<MyData> adapter = new ArrayAdapter<MyData>(this,
                 android.R.layout.simple_spinner_item, items);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

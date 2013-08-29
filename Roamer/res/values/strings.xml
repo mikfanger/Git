@@ -28,5 +28,7 @@
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
     <string name="continue_button">Continue</string>
+    <string name="title_activity_create_account_activity2">CreateAccountActivity2</string>
+    <string name="tell_about_work">Tell us about your work...</string>
 
 </resources>
