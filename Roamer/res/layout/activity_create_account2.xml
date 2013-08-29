@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settings_background" >
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="322dp"
+        android:layout_y="142dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="162dp"
+        android:layout_height="42dp"
+        android:layout_x="165dp"
+        android:layout_y="13dp"
+        android:text="@string/tell_about_work"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="210dp"
+        android:layout_y="102dp"
+        android:text="Industry?"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/submitInfo"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_x="25dp"
+        android:layout_y="186dp"
+        android:background="@drawable/next" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="84dp"
+        android:layout_height="45dp"
+        android:layout_x="210dp"
+        android:layout_y="150dp"
+        android:text="Position?"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/Spinner2"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
+        android:layout_x="322dp"
+        android:layout_y="80dp" />
+
+</AbsoluteLayout>
