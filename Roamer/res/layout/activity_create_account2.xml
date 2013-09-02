@@ -30,14 +30,6 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold" />
 
-    <ImageButton
-        android:id="@+id/submitInfo"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_x="25dp"
-        android:layout_y="186dp"
-        android:background="@drawable/next" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="84dp"
@@ -53,6 +45,23 @@
         android:layout_width="206dp"
         android:layout_height="wrap_content"
         android:layout_x="322dp"
-        android:layout_y="80dp" />
+        android:layout_y="90dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="26dp"
+        android:layout_y="212dp"
+        android:text="Continue"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageButton
+        android:id="@+id/submitInfo"
+        android:layout_width="88dp"
+        android:layout_height="72dp"
+        android:layout_x="14dp"
+        android:layout_y="158dp"
+        android:background="@drawable/next" />
 
 </AbsoluteLayout>

@@ -49,13 +49,22 @@
         android:text="Where are you from?"
         android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="26dp"
+        android:layout_y="212dp"
+        android:text="Continue"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ImageButton
         android:id="@+id/submitInfo"
         android:layout_width="80dp"
         android:layout_height="70dp"
-        android:layout_x="24dp"
-        android:layout_y="172dp"
+        android:layout_x="22dp"
+        android:layout_y="158dp"
         android:background="@drawable/next" />
 
 </AbsoluteLayout>

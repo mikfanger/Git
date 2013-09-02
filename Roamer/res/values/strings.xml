@@ -30,5 +30,6 @@
     <string name="continue_button">Continue</string>
     <string name="title_activity_create_account_activity2">CreateAccountActivity2</string>
     <string name="tell_about_work">Tell us about your work...</string>
+    <string name="title_activity_create_account_activity_pic">CreateAccountActivityPic</string>
 
 </resources>

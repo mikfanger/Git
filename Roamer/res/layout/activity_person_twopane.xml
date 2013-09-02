@@ -43,7 +43,7 @@
         android:layout_weight="0.50" >
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/userPicture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/chicago_cartoon" />

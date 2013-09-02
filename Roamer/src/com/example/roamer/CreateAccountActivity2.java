@@ -30,7 +30,7 @@ public class CreateAccountActivity2 extends Activity {
 	            @Override
 	            public void onClick(View v) {
 	            	
-	            	Intent i=new Intent(CreateAccountActivity2.this,HomeScreenActivity.class);
+	            	Intent i=new Intent(CreateAccountActivity2.this,CreateAccountActivityPic.class);
 	                startActivity(i);
 	            }
 	        });
