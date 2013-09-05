@@ -2,8 +2,6 @@ package com.example.roamer;
 
 //import com.example.roamer.CreateAccountActivity.MyData;
 
-import com.example.roamer.CreateAccountActivity.MyData;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -36,7 +34,7 @@ public class CreateAccountActivity2 extends Activity {
 	        });
 	        
 	        //Industry spinner
-	        Spinner industry = (Spinner) findViewById(R.id.spinner1);
+	        Spinner industry = (Spinner) findViewById(R.id.spinner2);
 	        //Prepare adapter 
 	        //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
 	        final MyData items[] = new MyData[6];
@@ -75,7 +73,7 @@ public class CreateAccountActivity2 extends Activity {
 	        items1[3] = new MyData("IT", "value2");
 	        items1[4] = new MyData("Consulting", "value3");
 	        ArrayAdapter<MyData> adapter1 = new ArrayAdapter<MyData>(this,
-	                android.R.layout.simple_spinner_item, items);
+	                android.R.layout.simple_spinner_item, items1);
 	        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 	        position.setAdapter(adapter1);
 	        position.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
