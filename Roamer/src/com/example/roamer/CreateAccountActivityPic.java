@@ -6,10 +6,13 @@ import android.provider.MediaStore;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class CreateAccountActivityPic extends Activity {
 
@@ -19,9 +22,15 @@ public class CreateAccountActivityPic extends Activity {
 	    //ADDED
 	private String filemanagerstring;
 	
+	ImageView ivGalImg;
+	Bitmap bmp;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
+		ivGalImg     =     (ImageView)findViewById(R.id.ivImage);
 		setContentView(R.layout.activity_create_account_pic);
 		
 		Button introButton = (Button) findViewById(R.id.findPicture);
@@ -64,6 +73,16 @@ public class CreateAccountActivityPic extends Activity {
         if (resultCode == RESULT_OK) {
             if (requestCode == SELECT_PICTURE) {
                 Uri selectedImageUri = data.getData();
+                
+                if(bmp != null && !bmp.isRecycled())
+                {
+                    bmp = null;                
+                }
+                
+                //Set image path to current photo, will change image to selected one
+                bmp = BitmapFactory.decodeFile(this.getPath(selectedImageUri));
+                ivGalImg.setBackgroundResource(0);
+                ivGalImg.setImageBitmap(bmp);              
 
                 //OI FILE Manager
                 filemanagerstring = selectedImageUri.getPath();

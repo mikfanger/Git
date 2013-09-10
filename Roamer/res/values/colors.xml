@@ -2,5 +2,7 @@
 <resources>
 
     <color name="teal">#008080</color>
+    <color name="transparent">#00000000</color>
+    <color name="tan">#e1ddcf</color>
 
 </resources>

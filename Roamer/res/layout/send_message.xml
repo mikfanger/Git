@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,79 +6,78 @@
     android:contentDescription="@string/credit_tag"
     tools:context=".SendMessage" >
 
+    <Button
+        android:id="@+id/inboxButton"
+        android:layout_width="52dp"
+        android:layout_height="33dp"
+        android:layout_x="35dp"
+        android:layout_y="118dp"
+        android:background="@drawable/btn_blue"
+        android:minHeight="55dp"
+        android:text="@string/check_inbox_button"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/SendButton"
+        android:layout_width="50dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_x="35dp"
+        android:layout_y="172dp"
+        android:background="@drawable/btn_blue"
+        android:minHeight="55dp"
+        android:text="@string/send_message_button"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="124dp"
+        android:layout_y="118dp"
+        android:checkableBehavior="single"
+        android:text="@string/grab_a_drink" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_x="124dp"
+        android:layout_y="146dp"
+        android:checkableBehavior="single"
+        android:text="@string/anyone_around" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="124dp"
+        android:layout_y="173dp"
+        android:checkableBehavior="single"
+        android:text="@string/getting_food" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:layout_marginLeft="118dp"
+        android:layout_x="124dp"
+        android:layout_y="200dp"
+        android:checkableBehavior="single"
+        android:text="@string/out_tonight" />
+
     <EditText
         android:id="@+id/fillLocation"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/checkBox1"
-        android:layout_toRightOf="@+id/checkBox1"
+        android:layout_x="307dp"
+        android:layout_y="200dp"
         android:ems="10"
         android:hint="@string/fill_location" >
 
         <requestFocus />
     </EditText>
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="78dp"
-        android:layout_marginLeft="118dp"
-        android:checkableBehavior="single"
-        android:text="@string/out_tonight" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/checkBox3"
-        android:layout_alignLeft="@+id/checkBox3"
-        android:checkableBehavior="single"
-        android:text="@string/getting_food" />
-
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox2"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="22dp"
-        android:checkableBehavior="single"
-        android:text="@string/anyone_around" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/fillLocation"
-        android:layout_alignLeft="@+id/checkBox3"
-        android:checkableBehavior="single"
-        android:text="@string/grab_a_drink" />
-
-    <Button
-        android:id="@+id/SendButton"
-        android:layout_width="50dp"
-        android:layout_height="33dp"
-        android:layout_above="@+id/checkBox3"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="33dp"
-        android:background="@drawable/btn_blue"
-        android:minHeight="55dp"
-        android:text="@string/send_message_button"
-        android:textSize="12sp" />
-
-    <Button
-        android:id="@+id/inboxButton"
-        android:layout_width="52dp"
-        android:layout_height="33dp"
-        android:layout_alignBaseline="@+id/checkBox2"
-        android:layout_alignBottom="@+id/checkBox2"
-        android:layout_alignLeft="@+id/SendButton"
-        android:background="@drawable/btn_blue"
-        android:minHeight="55dp"
-        android:text="@string/check_inbox_button"
-        android:textSize="12sp" />
-
-</RelativeLayout>
+</AbsoluteLayout>

@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class CreateAccountActivity2 extends Activity {
@@ -23,7 +23,7 @@ public class CreateAccountActivity2 extends Activity {
 	        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 	        setContentView(R.layout.activity_create_account2);
 	        
-	        ImageButton introButton = (ImageButton) findViewById(R.id.submitInfo);
+	        Button introButton = (Button) findViewById(R.id.submitInfo);
 	        introButton.setOnClickListener(new OnClickListener() {
 	            @Override
 	            public void onClick(View v) {

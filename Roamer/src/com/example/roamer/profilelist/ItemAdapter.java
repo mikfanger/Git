@@ -12,6 +12,8 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.io.InputStream;
 
+import com.example.roamer.R;
+
 public class ItemAdapter extends ArrayAdapter<String> {
 
     private final Context context;
@@ -34,13 +36,14 @@ public class ItemAdapter extends ArrayAdapter<String> {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View rowView = inflater.inflate(rowResourceId, parent, false);
-       // ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
-       // TextView textView = (TextView) rowView.findViewById(R.id.textView);
+        
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
+        TextView textView = (TextView) rowView.findViewById(R.id.textView);
 
         int id = Integer.parseInt(Ids[position]);
         String imageFile = Model.GetbyId(id).IconFile;
 
-        //textView.setText(Model.GetbyId(id).Name);
+        textView.setText(Model.GetbyId(id).Name);
         // get input stream
         InputStream ims = null;
         try {
@@ -51,7 +54,7 @@ public class ItemAdapter extends ArrayAdapter<String> {
         // load image as Drawable
         Drawable d = Drawable.createFromStream(ims, null);
         // set image to ImageView
-        //imageView.setImageDrawable(d);
+        imageView.setImageDrawable(d);
         return rowView;
 
     }

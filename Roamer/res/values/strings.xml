@@ -7,7 +7,7 @@
     <string name="intro_image_desc">Intro Image!</string>
     <string name="credit_tag">by Anywhere but here! Designs</string>
     <string name="find_roamer">Find Roamer</string>
-    <string name="send_message">Send Out Message</string>
+    <string name="send_message">Send Message</string>
     <string name="check_inbox">Check Inbox</string>
     <string name="set_location">Set Location</string>
     <string name="fill_location">Fill In Location</string>
@@ -31,5 +31,6 @@
     <string name="title_activity_create_account_activity2">CreateAccountActivity2</string>
     <string name="tell_about_work">Tell us about your work...</string>
     <string name="title_activity_create_account_activity_pic">CreateAccountActivityPic</string>
+    <string name="title_profile_list_activity">Local Roamers</string>
 
 </resources>

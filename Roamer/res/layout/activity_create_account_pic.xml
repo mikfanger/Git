@@ -9,7 +9,7 @@
     tools:context=".CreateAccountActivityPic" >
 
     <ImageView
-        android:id="@+id/userPicture"
+        android:id="@+id/ivImage"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginLeft="136dp"
@@ -23,16 +23,18 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="53dp"
         android:layout_marginLeft="88dp"
-        android:layout_x="118dp"
-        android:layout_y="162dp"
+        android:layout_x="78dp"
+        android:layout_y="160dp"
+        android:background="@drawable/btn_blue"
         android:text="Find Picture" />
 
     <Button
         android:id="@+id/finishProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="292dp"
-        android:layout_y="162dp"
+        android:layout_x="273dp"
+        android:layout_y="157dp"
+        android:background="@drawable/btn_blue"
         android:text="Done, get to Roaming!" />
 
 </AbsoluteLayout>

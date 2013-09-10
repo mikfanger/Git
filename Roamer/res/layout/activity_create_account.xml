@@ -1,70 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/settings_background" >
+    android:background="@drawable/luggage_tag_tan">
 
-    <Spinner
-        android:id="@+id/spinner1"
+    <Button
+        android:id="@+id/submitInfo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="322dp"
-        android:layout_y="142dp" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="118dp"
-        android:layout_height="wrap_content"
-        android:layout_x="322dp"
-        android:layout_y="96dp"
-        android:ems="10"
-        android:hint="name"
-        android:inputType="textPersonName" />
+        android:layout_height="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="31dp"
+        android:background="@drawable/btn_blue"
+        android:minHeight="55dp"
+        android:text="Continue"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="162dp"
         android:layout_height="42dp"
-        android:layout_x="165dp"
-        android:layout_y="13dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="22dp"
         android:text="Let&apos;s start with the basics..."
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="28dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submitInfo"
+        android:layout_alignLeft="@+id/editText1" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="210dp"
-        android:layout_y="102dp"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginRight="15dp"
         android:text="First Name?"
-        android:textStyle="bold"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="84dp"
         android:layout_height="45dp"
-        android:layout_x="210dp"
-        android:layout_y="132dp"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignTop="@+id/spinner1"
         android:text="Where are you from?"
-        android:textStyle="bold"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-    
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="26dp"
-        android:layout_y="212dp"
-        android:text="Continue"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
 
-    <ImageButton
-        android:id="@+id/submitInfo"
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_x="22dp"
-        android:layout_y="158dp"
-        android:background="@drawable/next" />
-
-</AbsoluteLayout>
+</RelativeLayout>
