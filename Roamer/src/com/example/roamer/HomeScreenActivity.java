@@ -1,6 +1,7 @@
 package com.example.roamer;
 
 
+import com.example.roamer.checkinbox.InboxActivity;
 import com.example.roamer.profilelist.ProfileListActivity;
 import android.os.Bundle;
 import android.app.Activity;
@@ -55,6 +56,28 @@ public class HomeScreenActivity extends Activity {
             public void onClick(View v) {
             	
             	Intent i=new Intent(HomeScreenActivity.this,ProfileListActivity.class);
+                startActivity(i);
+            		  
+            }
+        });
+        
+        ImageButton setLocationButton = (ImageButton) findViewById(R.id.setLocationButton);
+        setLocationButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	
+            	Intent i=new Intent(HomeScreenActivity.this,SetLocationActivity.class);
+                startActivity(i);
+            		  
+            }
+        });
+        
+        ImageButton inboxButton = (ImageButton) findViewById(R.id.checkInboxButton);
+        inboxButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	
+            	Intent i=new Intent(HomeScreenActivity.this,InboxActivity.class);
                 startActivity(i);
             		  
             }

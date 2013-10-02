@@ -32,9 +32,9 @@ public class SendMessage extends Activity {
             @Override
             public void onClick(View v) {
             	
-            	CheckBox check1 = (CheckBox)findViewById(R.id.checkBox1);
-            	CheckBox check2 = (CheckBox)findViewById(R.id.checkBox2);
             	CheckBox check3 = (CheckBox)findViewById(R.id.checkBox3);
+            	CheckBox check2 = (CheckBox)findViewById(R.id.checkBox2);
+            	CheckBox check1 = (CheckBox)findViewById(R.id.checkBox5);
             	CheckBox check4 = (CheckBox)findViewById(R.id.checkBox4);
             	
             	 if(check1.isChecked())
@@ -60,7 +60,7 @@ public class SendMessage extends Activity {
             }
         });
         
-        Button inboxButton = (Button) findViewById(R.id.inboxButton);
+        Button inboxButton = (Button) findViewById(R.id.checkInboxButton);
         inboxButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

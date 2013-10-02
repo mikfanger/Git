@@ -8,6 +8,8 @@
     >
     
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    
 
     <uses-sdk
         android:minSdkVersion="10"
@@ -31,6 +33,16 @@
         <activity
             android:name="com.example.roamer.HomeScreenActivity"
             android:label="@string/home_title_string"
+            android:parentActivityName="com.example.roamer.HomeScreenActivity" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.SetLocationActivity"
+            android:label="@string/title_set_location"
+            android:parentActivityName="com.example.roamer.HomeScreenActivity" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.checkinbox.InboxActivity"
+            android:label="@string/title_inbox"
             android:parentActivityName="com.example.roamer.HomeScreenActivity" >
         </activity>
         <activity

@@ -32,5 +32,7 @@
     <string name="tell_about_work">Tell us about your work...</string>
     <string name="title_activity_create_account_activity_pic">CreateAccountActivityPic</string>
     <string name="title_profile_list_activity">Local Roamers</string>
+    <string name="title_set_location">Set Location</string>
+    <string name="title_inbox">Inbox</string>
 
 </resources>
