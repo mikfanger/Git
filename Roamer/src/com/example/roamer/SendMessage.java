@@ -1,6 +1,5 @@
 package com.example.roamer;
 
-import com.example.roamer.location.MyLocation;
 import com.example.roamer.location.MyLocation.LocationResult;
 
 import android.location.Location;
@@ -15,7 +14,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class SendMessage extends Activity {
