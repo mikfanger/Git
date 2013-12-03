@@ -29,7 +29,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/customZip"
         android:layout_width="118dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
@@ -45,14 +45,14 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/submitInfo"
-        android:layout_alignLeft="@+id/editText1" />
+        android:layout_alignLeft="@+id/customZip" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText1"
-        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignBaseline="@+id/customZip"
+        android:layout_alignBottom="@+id/customZip"
         android:layout_alignRight="@+id/textView1"
         android:layout_marginRight="15dp"
         android:text="First Name?"

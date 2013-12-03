@@ -147,6 +147,28 @@ public class LoginActivity extends Activity {
 			focusView = mEmailView;
 			cancel = true;
 		}
+		
+		//Check that email address match
+		for (String credential : DUMMY_CREDENTIALS) {
+			String[] pieces = credential.split(":");
+			pieces[0] = "foo@example.com";
+			if (!pieces[0].equals(mEmail)) {
+				mEmailView.setError("No record of email address");
+				focusView = mEmailView;
+				cancel = true;
+			}
+		}
+		
+		//Check that email address match
+		for (String credential : DUMMY_CREDENTIALS) {
+			String[] pieces = credential.split(":");
+			pieces[1] = "hello";
+		if (!pieces[1].equals("mPassword")) {
+			mPasswordView.setError("Password does not match");
+			focusView = mEmailView;
+			cancel = true;
+			}
+		}
 
 		if (cancel) {
 			// There was an error; don't attempt login and focus the first
@@ -215,7 +237,7 @@ public class LoginActivity extends Activity {
 			try {
 				// Simulate network access.
 				Thread.sleep(2000);
-			} catch (InterruptedException e) {
+			} catch (InterruptedException e) { 
 				return false;
 			}
 

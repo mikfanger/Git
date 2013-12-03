@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class SetLocationActivity extends Activity {
@@ -36,22 +37,26 @@ public Location	newLocation;
             	
             	CheckBox check2 = (CheckBox)findViewById(R.id.gpsLocation);
             	CheckBox check1 = (CheckBox)findViewById(R.id.zipLocation);
+            	EditText zip = (EditText)findViewById(R.id.customZip);
             	Context context =  null;
             	CharSequence text = null;
             	int duration = 0;
             	
-            	 if(check1.isChecked())
+            	
+                 if(check1.isChecked())
                      {
-            		 context = getApplicationContext();
-                     text = "Location set to GPS!";
-                     duration = Toast.LENGTH_SHORT;
-                     }
-                 if(check2.isChecked())
-                     {
+                	 check2.setSelected(false);
                 	 context = getApplicationContext();
-                     text = "Location set to ZIP code!";
+                     text = "Location set to ZIP code!  Current zip is: " + zip.getText().toString();
                      duration = Toast.LENGTH_SHORT;
                      }
+                 
+                 if(check2.isChecked())
+                 	{
+                	 context = getApplicationContext();
+                	 text = "Location set to GPS!";
+                	 duration = Toast.LENGTH_SHORT;
+                 	}
                 
                  Toast toast = Toast.makeText(context, text, duration);
                  toast.setGravity(Gravity.TOP|Gravity.LEFT, 250, 130);

@@ -1,5 +1,8 @@
 package com.example.roamer;
 
+import java.io.File;
+import java.io.IOException;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -13,6 +16,16 @@ public class IntroActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+    	
+    	final String fileName = "CurrentUser.txt";
+    	final File currentDir = new File("user_info");
+    	final File file = new File (currentDir, fileName);
+    	try {
+			file.createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);

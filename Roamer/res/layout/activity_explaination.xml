@@ -9,24 +9,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ExplainationActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/continueButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp"
-        android:text="Roamer is designed to connect people in the same city.  The reality is that you aren&apos;t alone, you just didn&apos;t know it."
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
     <Button
         android:id="@+id/continueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="21dp"
+        android:layout_marginTop="17dp"
         android:background="@drawable/btn_blue"
         android:text="Continue" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="Roamer is designed to connect like-minded travelers.  Whether in the air or on the road, life moves quickly.  As Roamers, work can quickly consume our entire day."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="18dp"
+        android:text="The reality is that we are all Roamers, it&apos;s about time that we meet." />
 
 </RelativeLayout>
