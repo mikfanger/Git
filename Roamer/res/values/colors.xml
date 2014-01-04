@@ -5,5 +5,8 @@
     <color name="transparent">#00000000</color>
     <color name="tan">#e1ddcf</color>
     <color name="black">#FF000000</color>
+    <color name="NewBlack">#303333</color>
+    <color name="Grey">#d4d4d4</color>
+    <color name="DarkGrey">#354343</color>
 
 </resources>

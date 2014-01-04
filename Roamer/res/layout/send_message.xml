@@ -7,7 +7,7 @@
     tools:context=".SendMessage" >
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/agreeCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="126dp"

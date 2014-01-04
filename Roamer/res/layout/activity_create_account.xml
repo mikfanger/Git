@@ -2,71 +2,53 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/luggage_tag_tan">
+    android:background="@color/DarkGrey" >
 
-    <Button
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/createaccount_bottom_image" />
+
+    <CheckBox
+        android:id="@+id/agreeCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView1"
+        android:layout_alignParentLeft="true"
+        android:text="I agree to" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submitInfo"
+        android:layout_alignParentLeft="true"
+        android:text="Male" />
+
+    <CheckBox
+        android:id="@+id/femaleCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBox1"
+        android:layout_alignBottom="@+id/checkBox1"
+        android:layout_toRightOf="@+id/checkBox1"
+        android:text="Female" />
+
+    <ImageButton
         android:id="@+id/submitInfo"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="31dp"
-        android:background="@drawable/btn_blue"
+        android:layout_alignTop="@+id/agreeCheck"
+        android:layout_marginRight="17dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/continue_button"
         android:minHeight="55dp"
+        android:src="@drawable/next"
         android:text="Continue"
         android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="162dp"
-        android:layout_height="42dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="22dp"
-        android:text="Let&apos;s start with the basics..."
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <EditText
-        android:id="@+id/customZip"
-        android:layout_width="118dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="28dp"
-        android:layout_toRightOf="@+id/textView2"
-        android:ems="10"
-        android:hint="name"
-        android:inputType="textPersonName" />
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/submitInfo"
-        android:layout_alignLeft="@+id/customZip" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/customZip"
-        android:layout_alignBottom="@+id/customZip"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_marginRight="15dp"
-        android:text="First Name?"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="84dp"
-        android:layout_height="45dp"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignTop="@+id/spinner1"
-        android:text="Where are you from?"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textStyle="bold" />
 
 </RelativeLayout>

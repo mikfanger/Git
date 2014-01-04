@@ -33,7 +33,7 @@ public class SendMessage extends Activity {
             public void onClick(View v) {
             	
             	CheckBox check3 = (CheckBox)findViewById(R.id.checkBox3);
-            	CheckBox check2 = (CheckBox)findViewById(R.id.checkBox2);
+            	CheckBox check2 = (CheckBox)findViewById(R.id.agreeCheck);
             	CheckBox check1 = (CheckBox)findViewById(R.id.checkBox5);
             	CheckBox check4 = (CheckBox)findViewById(R.id.checkBox4);
             	
