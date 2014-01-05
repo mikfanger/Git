@@ -5,7 +5,7 @@
     android:background="@drawable/luggage_tag_tan" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textStepOne"
         android:layout_width="162dp"
         android:layout_height="42dp"
         android:layout_alignParentLeft="true"
@@ -33,7 +33,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/submitInfo"
-        android:layout_toRightOf="@+id/textView1" />
+        android:layout_toRightOf="@+id/textStepOne" />
 
     <Spinner
         android:id="@+id/spinner2"
@@ -46,7 +46,7 @@
         android:id="@+id/textView3"
         android:layout_width="84dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignLeft="@+id/textUsername"
         android:layout_alignTop="@+id/spinner1"
         android:layout_marginTop="22dp"
         android:text="Position?"
@@ -54,11 +54,11 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/spinner2"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignLeft="@+id/textStepOne"
         android:layout_marginBottom="22dp"
         android:layout_marginLeft="26dp"
         android:text="Industry?"

@@ -13,14 +13,14 @@
         android:id="@+id/continueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/textUsername"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:background="@drawable/btn_blue"
         android:text="Continue" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textStepOne"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -30,11 +30,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textUsername"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textStepOne"
+        android:layout_below="@+id/textStepOne"
         android:layout_marginTop="18dp"
         android:text="The reality is that we are all Roamers, it&apos;s about time that we meet." />
 

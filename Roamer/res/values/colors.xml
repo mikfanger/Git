@@ -8,5 +8,6 @@
     <color name="NewBlack">#303333</color>
     <color name="Grey">#d4d4d4</color>
     <color name="DarkGrey">#354343</color>
+    <color name="DarkWhite">#f3f2f3</color>
 
 </resources>

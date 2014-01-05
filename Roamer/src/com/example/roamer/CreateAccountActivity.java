@@ -1,20 +1,34 @@
 package com.example.roamer;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class CreateAccountActivity extends Activity {
 
+	private EditText newEmailAddress;
+	private EditText newUsername;
+	private EditText newPassword;
+	private EditText newConfirmPassword;
+	
+	private String mEmailAddress;
+	private String mUsername;
+	private String mPassword;
+	private String mConfirmPassword;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	
@@ -27,70 +41,68 @@ public class CreateAccountActivity extends Activity {
             @Override
             public void onClick(View v) {
             	
-            	Intent i=new Intent(CreateAccountActivity.this,CreateAccountActivity2.class);
-                startActivity(i);
+            	submitInfo();
             }
         });
         
-        Spinner s = (Spinner) findViewById(R.id.spinner1);
-        //Prepar adapter 
-        //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
-        final MyData items[] = new MyData[5];
-        items[0] = new MyData("Northeast", "value1");
-        items[1] = new MyData("Northwest", "value2");
-        items[2] = new MyData("Southeast", "value3");
-        items[3] = new MyData("Southwest", "value2");
-        items[4] = new MyData("Midwest", "value3");
-        ArrayAdapter<MyData> adapter = new ArrayAdapter<MyData>(this,
-                android.R.layout.simple_spinner_item, items);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        s.setAdapter(adapter);
-        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view,
-                    int position, long id) {
-                MyData d = items[position];
-
-                //Get selected value of key 
-                String value = d.getValue();
-                String key = d.getSpinnerText();
-            }
-
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
+        TextView myTextView=(TextView)findViewById(R.id.textStepOne);
+        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Eurostile.ttf");
+        myTextView.setTypeface(typeFace);
     }
     
-    class MyData {
-        public MyData(String spinnerText, String value) {
-            this.spinnerText = spinnerText;
-            this.value = value;
-        }
-
-        public String getSpinnerText() {
-            return spinnerText;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public String toString() {
-            return spinnerText;
-        }
-
-        String spinnerText;
-        String value;
-    }
-    
-    public void importPicture(){
-    	
-    }
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
+    public void submitInfo()
+    {
+    	newPassword = (EditText) findViewById(R.id.newPassword);
+    	newUsername = (EditText) findViewById(R.id.newUserName);
+    	newConfirmPassword = (EditText) findViewById(R.id.newConfirmPassword);
+    	newEmailAddress = (EditText) findViewById(R.id.newEmailAddress);
+    	
+    	mEmailAddress = newEmailAddress.getText().toString();
+    	mPassword = newPassword.getText().toString();
+    	mUsername = newUsername.getText().toString();
+    	mConfirmPassword = newConfirmPassword.getText().toString();
+    	
+    	boolean cancel = false;
+    	
+    	if (TextUtils.isEmpty(mEmailAddress)) {
+			cancel = true;
+		}
+    	if (TextUtils.isEmpty(mPassword)) {
+			cancel = true;
+		}
+    	if (TextUtils.isEmpty(mConfirmPassword)) {
+			cancel = true;
+		}
+    	if (TextUtils.isEmpty(mUsername)) {
+			cancel = true;
+		}
+		
+    	//Check that all fields are filled out
+    	if (cancel)
+    	{
+    		Intent i=new Intent(CreateAccountActivity.this,CreateAccountActivity2.class);
+            startActivity(i);
+    	}
+    	else
+    	{
+    		Context context = getApplicationContext();
+            CharSequence text = "Please fill out all fields!";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.setGravity(Gravity.TOP|Gravity.LEFT, 250, 130);
+            toast.show();
+    	}
+    	
+    }
+    
     
     
 }
