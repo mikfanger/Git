@@ -34,5 +34,6 @@
     <string name="title_profile_list_activity">Local Roamers</string>
     <string name="title_set_location">Set Location</string>
     <string name="title_inbox">Inbox</string>
+    <string name="txtCredits">terms/conditions</string>
 
 </resources>

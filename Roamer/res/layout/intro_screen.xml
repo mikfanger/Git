@@ -20,7 +20,7 @@
         android:src="@drawable/logo_with_text" />
 
     <TextView
-        android:id="@+id/textStepOne"
+        android:id="@+id/textStepTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

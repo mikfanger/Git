@@ -7,6 +7,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
@@ -45,9 +46,12 @@ public class CreateAccountActivity extends Activity {
             }
         });
         
-        TextView myTextView=(TextView)findViewById(R.id.textStepOne);
+        TextView myTextView=(TextView)findViewById(R.id.textStepTwo);
         Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Eurostile.ttf");
         myTextView.setTypeface(typeFace);
+        
+        TextView t2 = (TextView) findViewById(R.id.textTermsConditions);
+        t2.setMovementMethod(LinkMovementMethod.getInstance());
     }
     
 
@@ -60,7 +64,7 @@ public class CreateAccountActivity extends Activity {
     public void submitInfo()
     {
     	newPassword = (EditText) findViewById(R.id.newPassword);
-    	newUsername = (EditText) findViewById(R.id.newUserName);
+    	newUsername = (EditText) findViewById(R.id.newUsername);
     	newConfirmPassword = (EditText) findViewById(R.id.newConfirmPassword);
     	newEmailAddress = (EditText) findViewById(R.id.newEmailAddress);
     	

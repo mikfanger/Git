@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class CreateAccountActivityPic extends Activity {
@@ -33,7 +34,7 @@ public class CreateAccountActivityPic extends Activity {
 		ivGalImg     =     (ImageView)findViewById(R.id.ivImage);
 		setContentView(R.layout.activity_create_account_pic);
 		
-		Button introButton = (Button) findViewById(R.id.findPicture);
+		ImageButton introButton = (ImageButton) findViewById(R.id.findPicture);
         introButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

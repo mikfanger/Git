@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/generalnotitle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/DarkGrey" >
@@ -19,7 +20,8 @@
         android:layout_above="@+id/imageView1"
         android:layout_alignParentLeft="true"
         android:text="I agree to"
-        android:textColor="@color/DarkWhite" />
+        android:textColor="@color/DarkWhite"
+        android:textSize="14sp" />
 
     <CheckBox
         android:id="@+id/checkMale"
@@ -28,7 +30,8 @@
         android:layout_above="@+id/submitInfo"
         android:layout_alignParentLeft="true"
         android:text="Male"
-        android:textColor="@color/DarkWhite" />
+        android:textColor="@color/DarkWhite"
+        android:textSize="14sp" />
 
     <ImageButton
         android:id="@+id/submitInfo"
@@ -44,20 +47,8 @@
         android:text="Continue"
         android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/textStepOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/submitInfo"
-        android:layout_marginTop="18dp"
-        android:text="Step 1 of 3"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/DarkWhite"
-        android:typeface="normal" />
-
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivImage"
         android:layout_width="7dp"
         android:layout_height="7dp"
         android:layout_alignTop="@+id/textEmailAddress"
@@ -66,7 +57,7 @@
         android:src="@drawable/red_star_red" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/tag"
         android:layout_width="7dp"
         android:layout_height="7dp"
         android:layout_alignTop="@+id/textUsername"
@@ -74,22 +65,11 @@
         android:scaleType="fitCenter"
         android:src="@drawable/red_star_red" />
 
-    <TextView
-        android:id="@+id/textUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textEmailAddress"
-        android:layout_below="@+id/textEmailAddress"
-        android:layout_marginTop="39dp"
-        android:text="Username"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/DarkWhite" />
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="7dp"
         android:layout_height="7dp"
-        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignLeft="@+id/tag"
         android:layout_alignTop="@+id/textPassword"
         android:src="@drawable/red_star_red" />
 
@@ -101,43 +81,67 @@
         android:layout_toRightOf="@+id/textConfirmPassword"
         android:src="@drawable/red_star_red" />
 
-    <EditText
-        android:id="@+id/newEmailAddress"
+    <CheckBox
+        android:id="@+id/femaleCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textEmailAddress"
-        android:layout_alignRight="@+id/imageView5"
-        android:layout_below="@+id/textEmailAddress"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:layout_alignBaseline="@+id/checkMale"
+        android:layout_alignBottom="@+id/checkMale"
+        android:layout_toRightOf="@+id/ivImage"
+        android:text="Female"
+        android:textColor="@color/DarkWhite"
+        android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/textPassword"
+        android:id="@+id/textStepTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/newUserName"
-        android:layout_toLeftOf="@+id/imageView4"
-        android:text="Password"
+        android:layout_alignRight="@+id/submitInfo"
+        android:layout_alignTop="@+id/tag"
+        android:text="Step 1 of 3"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/DarkWhite" />
-
-    <EditText
-        android:id="@+id/newPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textPassword"
-        android:layout_alignRight="@+id/imageView5"
-        android:layout_below="@+id/textPassword"
-        android:ems="10"
-        android:inputType="textPassword" />
+        android:textColor="@color/DarkWhite"
+        android:typeface="normal" />
 
     <EditText
         android:id="@+id/newConfirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/checkMale"
         android:layout_alignLeft="@+id/textConfirmPassword"
-        android:layout_alignRight="@+id/imageView5"
-        android:layout_below="@+id/textConfirmPassword"
+        android:background="@color/transparent"
+        android:ems="10"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/newUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivImage"
+        android:layout_alignLeft="@+id/newEmailAddress"
+        android:background="@color/transparent"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/newEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView4"
+        android:layout_alignLeft="@+id/textPassword"
+        android:background="@color/transparent"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/newPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView5"
+        android:layout_alignLeft="@+id/textPassword"
+        android:background="@color/transparent"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -145,9 +149,19 @@
         android:id="@+id/textConfirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textPassword"
-        android:layout_below="@+id/newPassword"
+        android:layout_above="@+id/newConfirmPassword"
+        android:layout_alignLeft="@+id/newPassword"
         android:text="Confirm Password"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/DarkWhite" />
+
+    <TextView
+        android:id="@+id/textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/newPassword"
+        android:layout_toLeftOf="@+id/imageView4"
+        android:text="Password"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/DarkWhite" />
 
@@ -155,29 +169,40 @@
         android:id="@+id/textEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/newEmailAddress"
         android:layout_alignRight="@+id/agreeCheck"
-        android:layout_below="@+id/textStepOne"
         android:text="Email Address"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/DarkWhite" />
 
-    <EditText
-        android:id="@+id/newUserName"
+    <TextView
+        android:id="@+id/textUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textPassword"
-        android:layout_alignRight="@+id/newPassword"
-        android:layout_below="@+id/textUsername"
-        android:ems="10" />
-
-    <CheckBox
-        android:id="@+id/femaleCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/checkMale"
-        android:layout_alignBottom="@+id/checkMale"
-        android:layout_toRightOf="@+id/imageView2"
-        android:text="Female"
+        android:layout_above="@+id/newUsername"
+        android:layout_alignLeft="@+id/textEmailAddress"
+        android:text="Username"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/DarkWhite" />
+
+    <TextView
+        android:id="@+id/textTermsConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/agreeCheck"
+        android:layout_alignBottom="@+id/agreeCheck"
+        android:layout_toRightOf="@+id/ivImage"
+        android:text="@string/txtCredits"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/Red" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tag"
+        android:scaleType="fitCenter"
+        android:src="@drawable/roamer" />
 
 </RelativeLayout>

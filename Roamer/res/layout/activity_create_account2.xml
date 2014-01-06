@@ -2,67 +2,82 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/luggage_tag_tan" >
+    android:background="@color/DarkGrey" >
 
-    <TextView
-        android:id="@+id/textStepOne"
-        android:layout_width="162dp"
-        android:layout_height="42dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="18dp"
-        android:text="@string/tell_about_work"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button
-        android:id="@+id/submitInfo"
+    <ImageView
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
-        android:layout_height="33dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="24dp"
-        android:background="@drawable/btn_blue"
-        android:minHeight="55dp"
-        android:text="Continue"
-        android:textSize="12sp" />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/createaccount_bottom_image" />
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/submitInfo"
-        android:layout_toRightOf="@+id/textStepOne" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/spinner1"
-        android:layout_alignLeft="@+id/spinner1" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="84dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textUsername"
-        android:layout_alignTop="@+id/spinner1"
-        android:layout_marginTop="22dp"
-        android:text="Position?"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textUsername"
+    <ImageButton
+        android:id="@+id/submitInfo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/spinner2"
-        android:layout_alignLeft="@+id/textStepOne"
+        android:layout_above="@+id/imageView1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:background="@color/transparent"
+        android:src="@drawable/next" />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/submitInfo2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/regionsmap" />
+
+    <TextView
+        android:id="@+id/textStepTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivImage"
+        android:layout_alignRight="@+id/submitInfo2"
         android:layout_marginBottom="22dp"
-        android:layout_marginLeft="26dp"
-        android:text="Industry?"
+        android:text="Step 2 of 3"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textStyle="bold" />
+        android:textColor="@color/DarkWhite"
+        android:typeface="normal" />
+
+    <Spinner
+        android:id="@+id/spinnerRegion"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_above="@+id/ivImage"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/textStepTwo"
+        android:background="@color/transparent" />
+
+    <TextView
+        android:id="@+id/textTermsConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textStepTwo"
+        android:layout_alignBottom="@+id/textStepTwo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:text="Where are you from?"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/DarkWhite" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/roamer" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textTermsConditions"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/back" />
 
 </RelativeLayout>

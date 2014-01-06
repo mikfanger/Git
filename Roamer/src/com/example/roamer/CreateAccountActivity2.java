@@ -23,7 +23,7 @@ public class CreateAccountActivity2 extends Activity {
 	        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 	        setContentView(R.layout.activity_create_account2);
 	        
-	        Button introButton = (Button) findViewById(R.id.submitInfo);
+	        Button introButton = (Button) findViewById(R.id.submitInfo2);
 	        introButton.setOnClickListener(new OnClickListener() {
 	            @Override
 	            public void onClick(View v) {
@@ -33,45 +33,17 @@ public class CreateAccountActivity2 extends Activity {
 	            }
 	        });
 	        
-	        //Industry spinner
-	        Spinner industry = (Spinner) findViewById(R.id.spinner2);
-	        //Prepare adapter 
-	        //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
-	        final MyData items[] = new MyData[6];
-	        items[0] = new MyData("Healthcare", "value1");
-	        items[1] = new MyData("Industrial", "value2");
-	        items[2] = new MyData("Software", "value3");
-	        items[3] = new MyData("Construction", "value2");
-	        items[4] = new MyData("Finance", "value3");
-	        items[5] = new MyData("Real Estate", "value3");
-	        ArrayAdapter<MyData> adapter = new ArrayAdapter<MyData>(this,
-	                android.R.layout.simple_spinner_item, items);
-	        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-	        industry.setAdapter(adapter);
-	        industry.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-	            public void onItemSelected(AdapterView<?> parent, View view,
-	                    int position, long id) {
-	                MyData d = items[position];
-
-	                //Get selected value of key 
-	                String value = d.getValue();
-	                String key = d.getSpinnerText();
-	            }
-
-	            public void onNothingSelected(AdapterView<?> parent) {
-	            }
-	        });
 	        
-	        //Job position spinner
-	        Spinner position = (Spinner) findViewById(R.id.spinner1);
+	        //Region
+	        Spinner position = (Spinner) findViewById(R.id.spinnerRegion);
 	        //Prepar adapter 
 	        //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
 	        final MyData items1[] = new MyData[5];
-	        items1[0] = new MyData("Sales", "value1");
-	        items1[1] = new MyData("Marketing", "value2");
-	        items1[2] = new MyData("Accounting", "value3");
-	        items1[3] = new MyData("IT", "value2");
-	        items1[4] = new MyData("Consulting", "value3");
+	        items1[0] = new MyData("Midwest", "value1");
+	        items1[1] = new MyData("West", "value2");
+	        items1[2] = new MyData("Southwest", "value3");
+	        items1[3] = new MyData("Southeast", "value2");
+	        items1[4] = new MyData("Northeast", "value3");
 	        ArrayAdapter<MyData> adapter1 = new ArrayAdapter<MyData>(this,
 	                android.R.layout.simple_spinner_item, items1);
 	        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

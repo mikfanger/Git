@@ -63,7 +63,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/textStepOne"
+        android:id="@+id/textStepTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textUsername"
@@ -114,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ExitButtonMain"
         android:layout_marginLeft="34dp"
-        android:layout_toRightOf="@+id/textStepOne"
+        android:layout_toRightOf="@+id/textStepTwo"
         android:background="@color/transparent"
         android:contentDescription="@string/app_name"
         android:src="@drawable/honeycomb_sms" />
