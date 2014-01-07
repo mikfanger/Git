@@ -16,7 +16,7 @@ public class InboxActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.inbox_list);
 
         Model.LoadModel();

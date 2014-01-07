@@ -27,7 +27,7 @@ public Location	newLocation;
     protected void onCreate(Bundle savedInstanceState) {
     	
         super.onCreate(savedInstanceState);
-        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.set_location);
            
         Button backButton = (Button) findViewById(R.id.setLocationButton);

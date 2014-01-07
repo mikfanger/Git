@@ -3,6 +3,7 @@ package com.example.roamer;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -91,6 +92,13 @@ public class CreateAccountActivity extends Activity {
     	//Check that all fields are filled out
     	if (cancel == false)
     	{
+    		//Commit user preferences to database
+    		SharedPreferences settings = getSharedPreferences("UserInfo", 0);
+    		SharedPreferences.Editor editor = settings.edit();
+    		editor.putString("Username",mUsername);
+    		editor.putString("Password",mPassword);
+    		editor.commit();
+    		
     		Intent i=new Intent(CreateAccountActivity.this,CreateAccountActivity2.class);
             startActivity(i);
     	}
