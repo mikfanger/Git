@@ -31,30 +31,6 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
 
-<EditText
-    android:id="@+id/password"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/login"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="27dp"
-    android:ems="10"
-    android:hint="Password"
-    android:inputType="textPassword" >
-
-    <requestFocus />
-</EditText>
-
-<EditText
-    android:id="@+id/fillLocation"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/password"
-    android:layout_alignLeft="@+id/password"
-    android:ems="10"
-    android:hint="Email Address"
-    android:inputType="textEmailAddress" />
-
 <ImageButton
     android:id="@+id/login"
     android:layout_width="wrap_content"
@@ -70,8 +46,9 @@
     android:id="@+id/newUser"
     android:layout_width="164dp"
     android:layout_height="wrap_content"
+    android:layout_above="@+id/fillLocation"
     android:layout_alignLeft="@+id/roamerFriends"
-    android:layout_centerVertical="true"
+    android:layout_marginBottom="28dp"
     android:background="@color/transparent"
     android:contentDescription="@string/check_inbox_button"
     android:src="@drawable/create_account" />
@@ -80,9 +57,35 @@
     android:id="@+id/roamerFriends"
     android:layout_width="171dp"
     android:layout_height="202dp"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"
+    android:layout_above="@+id/newUser"
+    android:layout_alignLeft="@+id/login"
+    android:layout_marginBottom="22dp"
     android:contentDescription="@string/app_name"
     android:src="@drawable/logo_friends" />
+
+<EditText
+    android:id="@+id/fillLocation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/password2"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="18dp"
+    android:background="@color/DarkWhite"
+    android:ems="10"
+    android:hint="Email Address"
+    android:inputType="textEmailAddress" />
+
+<EditText
+    android:id="@+id/password2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/login"
+    android:layout_alignLeft="@+id/fillLocation"
+    android:layout_alignRight="@+id/fillLocation"
+    android:layout_marginBottom="22dp"
+    android:background="@color/DarkWhite"
+    android:ems="10"
+    android:hint="Password"
+    android:inputType="textPassword" />
 
   </RelativeLayout>

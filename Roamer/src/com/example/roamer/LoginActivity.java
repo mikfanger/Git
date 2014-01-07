@@ -53,7 +53,7 @@ public class LoginActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 		setContentView(R.layout.activity_login);
 
@@ -62,7 +62,7 @@ public class LoginActivity extends Activity {
 		mEmailView = (EditText) findViewById(R.id.fillLocation);
 		mEmailView.setText(mEmail);
 
-		mPasswordView = (EditText) findViewById(R.id.password);
+		mPasswordView = (EditText) findViewById(R.id.password2);	
 		mPasswordView
 				.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 					@Override
@@ -75,7 +75,7 @@ public class LoginActivity extends Activity {
 						return false;
 					}
 				});
-
+		
 		//mLoginFormView = findViewById(R.id.login_form);
 		mLoginStatusView = findViewById(R.id.login_status);
 		mLoginStatusMessageView = (TextView) findViewById(R.id.login_status_message);

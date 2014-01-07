@@ -45,7 +45,7 @@ public class SettingsActivity extends PreferenceActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		setupActionBar();
 	}
 

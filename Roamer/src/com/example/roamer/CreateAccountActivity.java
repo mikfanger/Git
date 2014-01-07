@@ -34,7 +34,7 @@ public class CreateAccountActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
     	
         super.onCreate(savedInstanceState);
-        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_create_account);
         
         ImageButton introButton = (ImageButton) findViewById(R.id.submitInfo);
@@ -50,7 +50,7 @@ public class CreateAccountActivity extends Activity {
         Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Eurostile.ttf");
         myTextView.setTypeface(typeFace);
         
-        TextView t2 = (TextView) findViewById(R.id.textTermsConditions);
+        TextView t2 = (TextView) findViewById(R.id.textWhereFrom);
         t2.setMovementMethod(LinkMovementMethod.getInstance());
     }
     
@@ -66,7 +66,7 @@ public class CreateAccountActivity extends Activity {
     	newPassword = (EditText) findViewById(R.id.newPassword);
     	newUsername = (EditText) findViewById(R.id.newUsername);
     	newConfirmPassword = (EditText) findViewById(R.id.newConfirmPassword);
-    	newEmailAddress = (EditText) findViewById(R.id.newEmailAddress);
+    	newEmailAddress = (EditText) findViewById(R.id.newEmail);
     	
     	mEmailAddress = newEmailAddress.getText().toString();
     	mPassword = newPassword.getText().toString();
@@ -89,7 +89,7 @@ public class CreateAccountActivity extends Activity {
 		}
 		
     	//Check that all fields are filled out
-    	if (cancel)
+    	if (cancel == false)
     	{
     		Intent i=new Intent(CreateAccountActivity.this,CreateAccountActivity2.class);
             startActivity(i);

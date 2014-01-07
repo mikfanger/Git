@@ -7,7 +7,6 @@ import android.content.pm.ActivityInfo;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class ExplainationActivity extends Activity {
@@ -15,10 +14,10 @@ public class ExplainationActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		setContentView(R.layout.activity_explaination);
 		
-		Button introButton = (Button) findViewById(R.id.continueButton);
+		ImageButton introButton = (ImageButton) findViewById(R.id.continueButton);
         introButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

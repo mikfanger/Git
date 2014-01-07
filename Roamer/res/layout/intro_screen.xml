@@ -13,8 +13,9 @@
         android:id="@+id/StartRoamerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="124dp"
         android:background="@color/transparent"
         android:contentDescription="@string/app_name"
         android:src="@drawable/logo_with_text" />
@@ -23,8 +24,9 @@
         android:id="@+id/textStepTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_below="@+id/StartRoamerButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
         android:text="@string/credit_tag" />
 
 </RelativeLayout>

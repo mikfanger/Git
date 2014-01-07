@@ -28,7 +28,7 @@ public class IntroActivity extends Activity {
 		}
     	
         super.onCreate(savedInstanceState);
-        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.intro_screen);
         
         ImageButton introButton = (ImageButton) findViewById(R.id.StartRoamerButton);

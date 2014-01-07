@@ -23,20 +23,8 @@ public class HomeScreenActivity extends Activity {
     	
 
         super.onCreate(savedInstanceState);
-        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
-        
-        ImageButton backButton = (ImageButton) findViewById(R.id.BackIntroButton);
-        backButton.setOnClickListener(new OnClickListener() {
-        	
-            @Override
-            
-            public void onClick(View v) {
-            	
-            	Intent i=new Intent(HomeScreenActivity.this,IntroActivity.class);
-                startActivity(i);
-            }
-        });
 
         
         ImageButton sendButton = (ImageButton) findViewById(R.id.sendMessageButton);
@@ -100,6 +88,7 @@ public class HomeScreenActivity extends Activity {
             @Override
             public void onClick(View v) {
             	
+  
             	Intent startMain = new Intent(Intent.ACTION_MAIN);
             	startMain.addCategory(Intent.CATEGORY_HOME);
             	startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -2,40 +2,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue_sky"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/plane_bg"
     tools:context=".ExplainationActivity" >
-
-    <Button
-        android:id="@+id/continueButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textUsername"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:background="@drawable/btn_blue"
-        android:text="Continue" />
-
-    <TextView
-        android:id="@+id/textStepTwo"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:text="Roamer is designed to connect like-minded travelers.  Whether in the air or on the road, life moves quickly.  As Roamers, work can quickly consume our entire day."
-        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/textUsername"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textStepTwo"
         android:layout_below="@+id/textStepTwo"
-        android:layout_marginTop="18dp"
-        android:text="The reality is that we are all Roamers, it&apos;s about time that we meet." />
+        android:layout_marginTop="28dp"
+        android:text="The reality is that we are all Roamers, it&apos;s about time that we meet."
+        android:textColor="@color/DarkWhite" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        android:src="@drawable/gray_gradient" />
+
+    <TextView
+        android:id="@+id/textStepTwo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Roamer is designed to connect like-minded travelers.  Whether in the air or on the road, life moves quickly.  As Roamers, work can quickly consume our entire day."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/DarkWhite" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/roamer" />
+
+    <ImageButton
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent"
+        android:src="@drawable/create_account" />
 
 </RelativeLayout>

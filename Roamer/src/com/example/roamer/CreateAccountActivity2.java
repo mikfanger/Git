@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 public class CreateAccountActivity2 extends Activity {
@@ -20,19 +20,30 @@ public class CreateAccountActivity2 extends Activity {
 	    protected void onCreate(Bundle savedInstanceState) {
 	    	
 	        super.onCreate(savedInstanceState);
-	        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+	        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	        setContentView(R.layout.activity_create_account2);
 	        
-	        Button introButton = (Button) findViewById(R.id.submitInfo2);
+	        ImageButton introButton = (ImageButton) findViewById(R.id.submitInfo2);
 	        introButton.setOnClickListener(new OnClickListener() {
 	            @Override
 	            public void onClick(View v) {
+	            	
 	            	
 	            	Intent i=new Intent(CreateAccountActivity2.this,CreateAccountActivityPic.class);
 	                startActivity(i);
 	            }
 	        });
 	        
+	        ImageButton backButton = (ImageButton) findViewById(R.id.backButton2);
+	        backButton.setOnClickListener(new OnClickListener() {
+	            @Override
+	            public void onClick(View v) {
+	            	
+	            	v.performClick();
+	            	Intent i=new Intent(CreateAccountActivity2.this,CreateAccountActivity.class);
+	                startActivity(i);
+	            }
+	        });
 	        
 	        //Region
 	        Spinner position = (Spinner) findViewById(R.id.spinnerRegion);
