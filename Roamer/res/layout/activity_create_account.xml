@@ -108,7 +108,7 @@
         android:id="@+id/newUsername"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:layout_above="@+id/mapImage"
+        android:layout_above="@id/textEmailAddress"
         android:layout_alignLeft="@+id/newEmail"
         android:layout_alignRight="@+id/textWhereFrom"
         android:background="@drawable/field_entry"
@@ -172,6 +172,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/newUsername"
         android:layout_alignLeft="@+id/textEmailAddress"
+        android:layout_below="@+id/imageRedView"
+        android:layout_marginTop="42dp"
         android:text="Username"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/DarkWhite" />
@@ -208,7 +210,7 @@
         android:src="@drawable/roamer" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageRedView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -221,7 +223,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView6"
+        android:layout_alignTop="@+id/imageRedView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="9dp"
         android:text="Create your tag and check in!"

@@ -46,15 +46,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
         android:background="@drawable/btn_gray"
-        android:src="@color/transparent" />
+        android:src="@color/DarkGrey" />
 
     <ImageButton
         android:id="@+id/findRoamers"
         android:layout_width="100dp"
         android:layout_height="85dp"
-        android:layout_alignLeft="@id/imageView3"
         android:layout_alignTop="@+id/imageView3"
-        android:layout_marginLeft="3dp"
+        android:layout_marginLeft="18dp"
         android:layout_marginTop="17dp"
         android:layout_toRightOf="@+id/settingsButton"
         android:background="@color/transparent"
@@ -85,18 +84,7 @@
         android:src="@drawable/events" />
 
     <ImageButton
-        android:id="@+id/sendMessageButton"
-        android:layout_width="100dp"
-        android:layout_height="85dp"
-        android:layout_above="@+id/checkInboxButton"
-        android:layout_toRightOf="@+id/findRoamers"
-        android:background="@color/transparent"
-        android:contentDescription="@string/app_name"
-        android:scaleType="fitCenter"
-        android:src="@drawable/inbox" />
-
-    <ImageButton
-        android:id="@+id/setLocationButton"
+        android:id="@+id/getMyRoamersButton"
         android:layout_width="100dp"
         android:layout_height="85dp"
         android:layout_alignTop="@+id/checkInboxButton"
@@ -105,5 +93,16 @@
         android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"
         android:src="@drawable/myroamers" />
+
+    <ImageButton
+        android:id="@+id/sendMessageButton"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_alignLeft="@+id/getMyRoamersButton"
+        android:layout_alignTop="@+id/findRoamers"
+        android:background="@color/transparent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/inbox" />
 
 </RelativeLayout>

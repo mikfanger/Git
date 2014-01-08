@@ -35,5 +35,6 @@
     <string name="title_set_location">Set Location</string>
     <string name="title_inbox">Inbox</string>
     <string name="txtCredits">terms/conditions</string>
+    <string name="title_activity_settings_activity2">SettingsActivity2</string>
 
 </resources>

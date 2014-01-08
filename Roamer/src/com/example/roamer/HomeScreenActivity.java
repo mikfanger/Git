@@ -49,7 +49,7 @@ public class HomeScreenActivity extends Activity {
             }
         });
         
-        ImageButton setLocationButton = (ImageButton) findViewById(R.id.setLocationButton);
+        ImageButton setLocationButton = (ImageButton) findViewById(R.id.getMyRoamersButton);
         setLocationButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

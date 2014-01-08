@@ -3,10 +3,10 @@ package com.example.roamer;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.view.Gravity;
@@ -30,6 +30,11 @@ public class CreateAccountActivity extends Activity {
 	private String mUsername;
 	private String mPassword;
 	private String mConfirmPassword;
+	private String error;
+	
+	private static final String passNotEqual = "Passwords must match!";
+	private static final String fieldEmpty = "All fields must be filled!";
+    private static final String invalidEmail = "Email addresses much contain @ symbol!";
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,26 +83,38 @@ public class CreateAccountActivity extends Activity {
     	
     	if (TextUtils.isEmpty(mEmailAddress)) {
 			cancel = true;
+			error = fieldEmpty;
 		}
     	if (TextUtils.isEmpty(mPassword)) {
 			cancel = true;
+			error = fieldEmpty;
 		}
     	if (TextUtils.isEmpty(mConfirmPassword)) {
 			cancel = true;
+			error = fieldEmpty;
 		}
     	if (TextUtils.isEmpty(mUsername)) {
 			cancel = true;
+			error = fieldEmpty;
 		}
+    	if(!mConfirmPassword.equals(mPassword))
+    	{
+    		cancel = true;
+    		error = passNotEqual;
+    	}
+    	 if (!mEmailAddress.contains("@"))
+    	 {
+    		 cancel = true;
+    		 error = invalidEmail;
+    	 }
 		
     	//Check that all fields are filled out
     	if (cancel == false)
     	{
     		//Commit user preferences to database
-    		SharedPreferences settings = getSharedPreferences("UserInfo", 0);
-    		SharedPreferences.Editor editor = settings.edit();
-    		editor.putString("Username",mUsername);
-    		editor.putString("Password",mPassword);
-    		editor.commit();
+    		PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerEmail", mEmailAddress).commit();
+    		PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerPassword", mPassword).commit();
+    		PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerUsername", mUsername).commit();
     		
     		Intent i=new Intent(CreateAccountActivity.this,CreateAccountActivity2.class);
             startActivity(i);
@@ -105,7 +122,7 @@ public class CreateAccountActivity extends Activity {
     	else
     	{
     		Context context = getApplicationContext();
-            CharSequence text = "Please fill out all fields!";
+            CharSequence text = error;
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);

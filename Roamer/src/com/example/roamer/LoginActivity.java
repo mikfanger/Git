@@ -9,6 +9,7 @@ import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -28,6 +29,7 @@ public class LoginActivity extends Activity {
 	 */
 	private static final String[] DUMMY_CREDENTIALS = new String[] {
 			"foo@example.com:hello", "bar@example.com:world" };
+	
 
 	/**
 	 * The default email to populate the email field with.
@@ -39,9 +41,13 @@ public class LoginActivity extends Activity {
 	 */
 	private UserLoginTask mAuthTask = null;
 
+
 	// Values for email and password at the time of the login attempt.
 	private String mEmail;
 	private String mPassword;
+	
+	private String userName;
+	private String passWord;
 
 	// UI references.
 	private EditText mEmailView;
@@ -49,11 +55,20 @@ public class LoginActivity extends Activity {
 	private View mLoginFormView;
 	private View mLoginStatusView;
 	private TextView mLoginStatusMessageView;
+	
+	//Set detault user preferences
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		
+		PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerEmail", "NotSet").commit();
+		PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerPassword", "NotSet").commit();
+		
+		userName = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerEmail","");
+		passWord =  PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerPassword","");
+		
 
 		setContentView(R.layout.activity_login);
 
@@ -149,26 +164,19 @@ public class LoginActivity extends Activity {
 		}
 		
 		//Check that email address match
-		for (String credential : DUMMY_CREDENTIALS) {
-			String[] pieces = credential.split(":");
-			pieces[0] = "foo@example.com";
-			if (!pieces[0].equals(mEmail)) {
+			if (!userName.equals(mEmail)) {
 				mEmailView.setError("No record of email address");
 				focusView = mEmailView;
 				cancel = true;
 			}
-		}
+	
 		
 		//Check that email address match
-		for (String credential : DUMMY_CREDENTIALS) {
-			String[] pieces = credential.split(":");
-			pieces[1] = "hello";
-		if (!pieces[1].equals("mPassword")) {
+		if (!passWord.equals("mPassword")) {
 			mPasswordView.setError("Password does not match");
 			focusView = mEmailView;
 			cancel = true;
 			}
-		}
 
 		if (cancel) {
 			// There was an error; don't attempt login and focus the first

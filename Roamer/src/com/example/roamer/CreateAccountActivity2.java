@@ -3,6 +3,7 @@ package com.example.roamer;
 //import com.example.roamer.CreateAccountActivity.MyData;
 
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -16,6 +17,7 @@ import android.widget.Spinner;
 
 public class CreateAccountActivity2 extends Activity {
 
+	public int spinnerPos;
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	    	
@@ -23,12 +25,15 @@ public class CreateAccountActivity2 extends Activity {
 	        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	        setContentView(R.layout.activity_create_account2);
 	        
+	        
 	        ImageButton introButton = (ImageButton) findViewById(R.id.submitInfo2);
 	        introButton.setOnClickListener(new OnClickListener() {
 	            @Override
 	            public void onClick(View v) {
 	            	
-	            	
+	            	Spinner position = (Spinner) findViewById(R.id.spinnerRegion);
+	            	spinnerPos = position.getSelectedItemPosition();
+	            	PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("RoamerRegion", spinnerPos).commit();
 	            	Intent i=new Intent(CreateAccountActivity2.this,CreateAccountActivityPic.class);
 	                startActivity(i);
 	            }

@@ -30,7 +30,7 @@ public Location	newLocation;
         this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.set_location);
            
-        Button backButton = (Button) findViewById(R.id.setLocationButton);
+        Button backButton = (Button) findViewById(R.id.getMyRoamersButton);
         backButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
