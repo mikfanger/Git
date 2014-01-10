@@ -54,7 +54,7 @@ public class HomeScreenActivity extends Activity {
             @Override
             public void onClick(View v) {
             	
-            	Intent i=new Intent(HomeScreenActivity.this,SetLocationActivity.class);
+            	Intent i=new Intent(HomeScreenActivity.this,MyRoamersActivity.class);
                 startActivity(i);
             		  
             }

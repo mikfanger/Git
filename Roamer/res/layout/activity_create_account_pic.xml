@@ -76,7 +76,7 @@
         android:src="@drawable/roamer" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/locationSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/finishProfile"
@@ -98,8 +98,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/locationSpinner"
+        android:layout_below="@+id/locationSpinner"
         android:layout_marginTop="36dp"
         android:text="Select your job"
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -109,9 +109,9 @@
         android:id="@+id/spinnerIndustry"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignLeft="@+id/locationSpinner"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/locationSpinner"
         android:background="@drawable/field_entry" />
 
     <Spinner
@@ -145,7 +145,7 @@
         android:id="@+id/backFromProfile"
         android:layout_width="7dp"
         android:layout_height="7dp"
-        android:layout_alignTop="@+id/textView1"
+        android:layout_alignTop="@+id/locationSpinner"
         android:layout_toRightOf="@+id/textView4"
         android:src="@drawable/red_star_red" />
 

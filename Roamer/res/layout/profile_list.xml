@@ -2,18 +2,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" 
-    android:background="@color/tan"
-    tools:context=".ProfileListActivity">"
+    android:background="@color/DarkGrey"
+    android:orientation="vertical"
+    tools:context=".ProfileListActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="center"
+            android:src="@drawable/gray_gradient" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="center"
+            android:src="@drawable/red_gradient" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/roamer" />
+
+        <ImageButton
+            android:id="@+id/findBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_marginLeft="17dp"
+            android:background="@color/transparent"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="Find roamers near you!"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/DarkWhite" />
+
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="wrap_content"
-        android:layout_height="154dp" />
+        android:layout_height="338dp"
+        android:cacheColorHint="@color/DarkWhite"
+        tools:listitem="@android:layout/simple_expandable_list_item_1" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="83dp"
+        android:layout_marginBottom="100dp"
         android:orientation="horizontal" >
 
         <TextView
@@ -31,19 +90,45 @@
             android:id="@+id/locationName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="24dp"
-            android:layout_toRightOf="@+id/createAccountBottom"
-            android:text="Current Location is: "
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="14dp"
+            android:text="Roamers located in: "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/DarkWhite" />
+
+        <Spinner
+            android:id="@+id/locationSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/locationName"
+            android:layout_alignRight="@+id/locationName"
+            android:layout_below="@+id/locationName"
+            android:background="@drawable/field_entry"
+            android:gravity="center"
+            android:text="Chicago Area"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/DarkWhite"
+            tools:listitem="@android:layout/simple_spinner_dropdown_item" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gray_gradient" />
 
         <ImageView
             android:id="@+id/createAccountBottom"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="14dp"
+            android:background="@color/transparent"
             android:src="@drawable/chicago_cartoon" />
 
     </RelativeLayout>

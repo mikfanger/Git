@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/terminal_landscape"
     android:contentDescription="@string/credit_tag"
-    tools:context=".SetLocationActivity" >
+    tools:context=".MyRoamersActivity" >
 
     <RelativeLayout
         android:layout_width="468dp"

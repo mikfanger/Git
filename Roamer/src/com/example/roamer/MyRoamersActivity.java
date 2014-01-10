@@ -19,7 +19,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class SetLocationActivity extends Activity {
+public class MyRoamersActivity extends Activity {
 	
 public Location	newLocation;
 
@@ -62,7 +62,7 @@ public Location	newLocation;
                  toast.setGravity(Gravity.TOP|Gravity.LEFT, 250, 130);
                  toast.show();
                  
-            	Intent i=new Intent(SetLocationActivity.this,HomeScreenActivity.class);
+            	Intent i=new Intent(MyRoamersActivity.this,HomeScreenActivity.class);
                 startActivity(i);
                 
             }
