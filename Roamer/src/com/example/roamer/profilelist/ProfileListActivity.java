@@ -1,5 +1,8 @@
 package com.example.roamer.profilelist;
 
+import com.example.roamer.HomeScreenActivity;
+import com.example.roamer.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -24,6 +27,7 @@ public class ProfileListActivity extends Activity {
         this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.profile_list);
 
+        /*
         Model.LoadModel();
         
         listView = (ListView) findViewById(R.id.listView);
@@ -35,6 +39,7 @@ public class ProfileListActivity extends Activity {
 
         ItemAdapter adapter = new ItemAdapter(this,R.layout.row, ids);
         listView.setAdapter(adapter);
+        */
         
         ImageButton backButton = (ImageButton) findViewById(R.id.findBackButton);
         backButton.setOnClickListener(new OnClickListener() {
@@ -48,15 +53,15 @@ public class ProfileListActivity extends Activity {
         });
         
         //Region
-        Spinner position = (Spinner) findViewById(R.id.locationSpinner);
+        final Spinner position = (Spinner) findViewById(R.id.locationSpinner);
         //Prepare adapter 
         //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
         final MyData locations[] = new MyData[5];
-        locations[0] = new MyData("Midwest", "value1");
-        locations[1] = new MyData("West", "value2");
-        locations[2] = new MyData("Southwest", "value3");
-        locations[3] = new MyData("Southeast", "value2");
-        locations[4] = new MyData("Northeast", "value3");
+        locations[0] = new MyData("Boston", "value1");
+        locations[1] = new MyData("Chicago", "value2");
+        locations[2] = new MyData("Cleveland", "value3");
+        locations[3] = new MyData("Oakland", "value2");
+        locations[4] = new MyData("Detroit", "value3");
         ArrayAdapter<MyData> adapter1 = new ArrayAdapter<MyData>(this,
                 android.R.layout.simple_spinner_item, locations);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -75,6 +80,18 @@ public class ProfileListActivity extends Activity {
 			public void onNothingSelected(AdapterView<?> arg0) {
 			}
         });
+        
+        position.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    			public void onItemSelected(AdapterView<?> parent, View view, int pos, long id){
+    				
+    				
+    				Object item = parent.getItemAtPosition(pos);
+    				String currentLocation = item.toString();
+    				createListView(currentLocation);
+    			}
+    			public void onNothingSelected(AdapterView<?> parent){
+    			}
+		});
 
     }
     
@@ -104,5 +121,21 @@ public class ProfileListActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+    
+    public void createListView(String Location)
+    {
+    	 Model.LoadModel(Location);
+         
+         listView = (ListView) findViewById(R.id.listView);
+         String[] ids = new String[Model.Items.size()];
+         for (int i= 0; i < ids.length; i++){
+        	 
+        	 
+             ids[i] = Integer.toString(i+1);
+         }
+
+         ItemAdapter adapter = new ItemAdapter(this,R.layout.row, ids);
+         listView.setAdapter(adapter);
     }
 }

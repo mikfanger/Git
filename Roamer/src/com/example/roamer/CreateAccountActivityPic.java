@@ -62,20 +62,25 @@ public class CreateAccountActivityPic extends Activity {
             	Spinner position = (Spinner) findViewById(R.id.spinnerIndustry);
             	spinnerPos = position.getSelectedItemPosition();
             	PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("RoamerIndustry", spinnerPos).commit();
+            	System.out.println("Spinner location is:   " +PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("RoamerIndustry",1));
             	
             	Spinner position2 = (Spinner) findViewById(R.id.spinnerJob);
             	spinnerPos = position2.getSelectedItemPosition();
             	PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("RoamerJob", spinnerPos).commit();
+            	System.out.println("Spinner location is:   " +PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("RoamerJob",1));
             	
             	Spinner position3 = (Spinner) findViewById(R.id.spinnerAirline);
             	spinnerPos = position3.getSelectedItemPosition();
             	PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("RoamerAirline", spinnerPos).commit();
+            	System.out.println("Spinner location is:   " +PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("RoamerAirline",1));
             	
             	Spinner position4 = (Spinner) findViewById(R.id.spinnerHotel);
             	spinnerPos = position4.getSelectedItemPosition();
             	PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("RoamerHotel", spinnerPos).commit();
+            	System.out.println("Spinner location is:   " +PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("RoamerHotel",1));
             	
             	PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerPicture", pictureUri).commit();
+            	System.out.println("Uri location is:   " +PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerPicture",""));
             	
             	//Move to Home Screen
             	Intent i=new Intent(CreateAccountActivityPic.this,HomeScreenActivity.class);
@@ -130,11 +135,11 @@ public class CreateAccountActivityPic extends Activity {
         //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
         final MyData items2[] = new MyData[6];
         items2[0] = new MyData("Select Industry", "value1");
-        items2[1] = new MyData("West", "value2");
-        items2[2] = new MyData("Southwest", "value3");
-        items2[3] = new MyData("Southeast", "value4");
-        items2[4] = new MyData("Northeast", "value5");
-        items2[5] = new MyData("Northeast", "value6");
+        items2[1] = new MyData("Medical", "value2");
+        items2[2] = new MyData("Finance", "value3");
+        items2[3] = new MyData("Software", "value4");
+        items2[4] = new MyData("Manufacturing", "value5");
+        items2[5] = new MyData("Biotech", "value6");
         ArrayAdapter<MyData> adapter2 = new ArrayAdapter<MyData>(this,
                 android.R.layout.simple_spinner_item, items2);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -159,11 +164,11 @@ public class CreateAccountActivityPic extends Activity {
         //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
         final MyData items3[] = new MyData[6];
         items3[0] = new MyData("Select Airline", "value1");
-        items3[1] = new MyData("West", "value2");
+        items3[1] = new MyData("Jet Blue", "value2");
         items3[2] = new MyData("Southwest", "value3");
-        items3[3] = new MyData("Southeast", "value2");
-        items3[4] = new MyData("Northeast", "value3");
-        items3[5] = new MyData("Northeast", "value3");
+        items3[3] = new MyData("Delta", "value2");
+        items3[4] = new MyData("United", "value3");
+        items3[5] = new MyData("American", "value3");
         ArrayAdapter<MyData> adapter3 = new ArrayAdapter<MyData>(this,
                 android.R.layout.simple_spinner_item, items3);
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -188,11 +193,11 @@ public class CreateAccountActivityPic extends Activity {
         //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
         final MyData items4[] = new MyData[6];
         items4[0] = new MyData("Select Hotel", "value1");
-        items4[1] = new MyData("West", "value2");
-        items4[2] = new MyData("Southwest", "value3");
-        items4[3] = new MyData("Southeast", "value2");
-        items4[4] = new MyData("Northeast", "value3");
-        items4[5] = new MyData("Northeast", "value3");
+        items4[1] = new MyData("Hilton", "value2");
+        items4[2] = new MyData("Starwood", "value3");
+        items4[3] = new MyData("Marriott", "value2");
+        items4[4] = new MyData("Doubletree", "value3");
+        items4[5] = new MyData("Brothel", "value3");
         ArrayAdapter<MyData> adapter4 = new ArrayAdapter<MyData>(this,
                 android.R.layout.simple_spinner_item, items4);
         adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -236,7 +241,8 @@ public class CreateAccountActivityPic extends Activity {
 	                Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
 	                cursor.moveToFirst();
 	                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-	                pictureUri = cursor.getString(columnIndex);
+	                //pictureUri = cursor.getString(columnIndex);
+	                pictureUri = selectedImage.toString();
 	                
 	                cursor.close();
 	              

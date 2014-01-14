@@ -43,13 +43,6 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.roamer.MyRoamersActivity"
-            android:label="@string/title_set_location"
-            android:parentActivityName="com.example.roamer.HomeScreenActivity"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name="com.example.roamer.checkinbox.InboxActivity"
             android:label="@string/title_inbox"
             android:parentActivityName="com.example.roamer.HomeScreenActivity"
@@ -117,7 +110,6 @@
         <activity
             android:name="com.example.roamer.profilelist.ProfileListActivity"
             android:label="@string/title_profile_list_activity"
-            android:parentActivityName="com.example.roamer.HomeScreenActivity"
             android:theme="@android:style/Theme.NoTitleBar"
             android:screenOrientation="portrait" >
         </activity>
@@ -133,6 +125,13 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar"
             android:label="@string/title_activity_settings_activity2" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.MyRoamersListActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.example.roamer.HomeScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
     </application>
 

@@ -19,6 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+
+
 public class CreateAccountActivity extends Activity {
 
 	private EditText newEmailAddress;

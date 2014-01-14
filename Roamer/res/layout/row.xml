@@ -24,5 +24,15 @@
         android:layout_marginLeft="66dp"
         android:layout_alignParentRight="true"
         android:gravity="center_vertical"/>
+    
+    <TextView
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:id="@+id/textViewLocation"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="170dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"/>
 
 </RelativeLayout>

@@ -31,7 +31,7 @@
             android:src="@drawable/red_gradient" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/roamerCreateTag"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_alignParentTop="true"
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignTop="@+id/imageView3"
+            android:layout_alignTop="@+id/roamerCreateTag"
             android:layout_marginLeft="17dp"
             android:background="@color/transparent"
             android:src="@drawable/back" />
@@ -65,13 +65,13 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="wrap_content"
-        android:layout_height="338dp"
+        android:layout_height="348dp"
         android:cacheColorHint="@color/DarkWhite"
         tools:listitem="@android:layout/simple_expandable_list_item_1" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="83dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="100dp"
         android:orientation="horizontal" >
 
@@ -127,7 +127,7 @@
             android:layout_height="70dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="14dp"
+            android:layout_alignTop="@+id/locationName"
             android:background="@color/transparent"
             android:src="@drawable/chicago_cartoon" />
 

@@ -2,6 +2,7 @@ package com.example.roamer;
 
 
 import com.example.roamer.checkinbox.InboxActivity;
+import com.example.roamer.profilelist.MyRoamersListActivity;
 import com.example.roamer.profilelist.ProfileListActivity;
 import android.os.Bundle;
 import android.app.Activity;
@@ -54,7 +55,7 @@ public class HomeScreenActivity extends Activity {
             @Override
             public void onClick(View v) {
             	
-            	Intent i=new Intent(HomeScreenActivity.this,MyRoamersActivity.class);
+            	Intent i=new Intent(HomeScreenActivity.this,MyRoamersListActivity.class);
                 startActivity(i);
             		  
             }

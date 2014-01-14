@@ -39,7 +39,7 @@
         android:src="@drawable/roamer" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/roamerCreateTag"
         android:layout_width="225dp"
         android:layout_height="200dp"
         android:layout_alignLeft="@+id/settingsButton"
@@ -54,7 +54,7 @@
         android:id="@+id/findRoamers"
         android:layout_width="100dp"
         android:layout_height="85dp"
-        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignTop="@+id/roamerCreateTag"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="17dp"
         android:layout_toRightOf="@+id/settingsButton"
@@ -68,7 +68,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignTop="@+id/settingsButton"
-        android:layout_toRightOf="@+id/imageView3"
+        android:layout_toRightOf="@+id/roamerCreateTag"
         android:background="@color/transparent"
         android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"

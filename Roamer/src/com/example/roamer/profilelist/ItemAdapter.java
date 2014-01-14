@@ -39,11 +39,24 @@ public class ItemAdapter extends ArrayAdapter<String> {
         
         ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
         TextView textView = (TextView) rowView.findViewById(R.id.textView);
+        TextView textViewLocation = (TextView) rowView.findViewById(R.id.textViewLocation);
+        
+        //Find current location
+        //String location = 
 
         int id = Integer.parseInt(Ids[position]);
+        
+        
+  
         String imageFile = Model.GetbyId(id).IconFile;
-
+        System.out.println("printicon");
+        
         textView.setText(Model.GetbyId(id).Name);
+        System.out.println("print name");
+        
+        textViewLocation.setText(Model.GetbyId(id).Location);
+        System.out.println("print location");
+        
         // get input stream
         InputStream ims = null;
         try {
