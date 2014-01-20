@@ -36,5 +36,6 @@
     <string name="title_inbox">Inbox</string>
     <string name="txtCredits">terms/conditions</string>
     <string name="title_activity_settings_activity2">SettingsActivity2</string>
+    <string name="title_activity_events">EventsActivity</string>
 
 </resources>

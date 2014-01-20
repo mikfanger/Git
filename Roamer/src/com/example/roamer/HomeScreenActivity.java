@@ -61,12 +61,12 @@ public class HomeScreenActivity extends Activity {
             }
         });
         
-        ImageButton inboxButton = (ImageButton) findViewById(R.id.checkInboxButton);
+        ImageButton inboxButton = (ImageButton) findViewById(R.id.checkEventsButton);
         inboxButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
             	
-            	Intent i=new Intent(HomeScreenActivity.this,InboxActivity.class);
+            	Intent i=new Intent(HomeScreenActivity.this,EventsActivity.class);
                 startActivity(i);
             		  
             }

@@ -14,7 +14,6 @@
     </uses-permission>
     <uses-permission android:name="android.permission.INTERNET" >
     </uses-permission>
-    
 
     <uses-sdk
         android:minSdkVersion="10"
@@ -39,35 +38,35 @@
             android:name="com.example.roamer.HomeScreenActivity"
             android:label="@string/home_title_string"
             android:parentActivityName="com.example.roamer.HomeScreenActivity"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.example.roamer.checkinbox.InboxActivity"
             android:label="@string/title_inbox"
             android:parentActivityName="com.example.roamer.HomeScreenActivity"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.example.roamer.SendMessage"
             android:label="@string/title_send_message"
             android:parentActivityName="com.example.roamer.HomeScreenActivity"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.example.roamer.PersonListActivity"
             android:label="@string/title_person_list"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.example.roamer.PersonDetailActivity"
             android:label="@string/title_person_detail"
             android:parentActivityName=".PersonListActivity"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PersonListActivity" />
@@ -86,8 +85,8 @@
         <activity
             android:name="com.example.roamer.ExplainationActivity"
             android:label="@string/title_activity_explaination"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.example.roamer.CreateAccountActivity"
@@ -110,8 +109,8 @@
         <activity
             android:name="com.example.roamer.profilelist.ProfileListActivity"
             android:label="@string/title_profile_list_activity"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.example.roamer.SettingsActivity"
@@ -122,9 +121,9 @@
         </activity>
         <activity
             android:name="com.example.roamer.SettingsActivity2"
+            android:label="@string/title_activity_settings_activity2"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:label="@string/title_activity_settings_activity2" >
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.example.roamer.MyRoamersListActivity"
@@ -132,6 +131,10 @@
             android:parentActivityName="com.example.roamer.HomeScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.EventsActivity"
+            android:label="@string/title_activity_events" >
         </activity>
     </application>
 

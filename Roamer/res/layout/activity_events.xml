@@ -11,12 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:layout_toLeftOf="@+id/checkInboxButton"
+        android:layout_toLeftOf="@+id/checkEventsButton"
         android:checkableBehavior="single"
         android:text="@string/grab_a_drink" />
 
     <Button
-        android:id="@+id/checkInboxButton"
+        android:id="@+id/checkEventsButton"
         android:layout_width="52dp"
         android:layout_height="33dp"
         android:layout_marginLeft="17dp"
@@ -69,7 +69,7 @@
         android:layout_alignTop="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="7dp"
-        android:text="See what events you&apos;ve been invited to!"
+        android:text="See events in your area!"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/DarkWhite" />
 

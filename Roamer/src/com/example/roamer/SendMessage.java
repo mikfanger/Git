@@ -16,7 +16,7 @@ public class SendMessage extends Activity {
     	
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_invited_events);
+        setContentView(R.layout.activity_send_message);
            
 
     }
