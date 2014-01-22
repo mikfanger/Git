@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/imageView1"
         android:layout_marginBottom="14dp"
-        android:layout_toRightOf="@+id/imageView4"
+        android:layout_toRightOf="@+id/backFromEvents"
         android:background="@color/transparent"
         android:src="@drawable/next" />
 
@@ -76,7 +76,7 @@
         android:textColor="@color/DarkWhite" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/backFromEvents"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_alignTop="@+id/backButton2"

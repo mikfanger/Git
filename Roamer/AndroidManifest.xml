@@ -16,7 +16,7 @@
     </uses-permission>
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="11"
         android:targetSdkVersion="19" />
 
     <application
@@ -27,7 +27,8 @@
         <activity
             android:name="com.example.roamer.IntroActivity"
             android:label="@string/app_name"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -134,7 +135,29 @@
         </activity>
         <activity
             android:name="com.example.roamer.EventsActivity"
-            android:label="@string/title_activity_events" >
+            android:label="@string/title_activity_events"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.AllEventsActivity"
+            android:label="@string/title_activity_all_events"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.MyEventsActivity"
+            android:label="@string/title_activity_my_events"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.TestScrollTabActivity"
+            android:label="@string/title_activity_test_scroll_tab" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.TestFixedTabActivity"
+            android:label="@string/title_activity_test_fixed_tab" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
     </application>
 

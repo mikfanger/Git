@@ -37,5 +37,9 @@
     <string name="txtCredits">terms/conditions</string>
     <string name="title_activity_settings_activity2">SettingsActivity2</string>
     <string name="title_activity_events">EventsActivity</string>
+    <string name="title_activity_all_events">AllEventsActivity</string>
+    <string name="title_activity_my_events">MyEventsActivity</string>
+    <string name="title_activity_test_scroll_tab">TestScrollTabActivity</string>
+    <string name="title_activity_test_fixed_tab">TestFixedTabActivity</string>
 
 </resources>

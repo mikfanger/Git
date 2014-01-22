@@ -41,7 +41,7 @@ public class ProfileListActivity extends Activity {
         listView.setAdapter(adapter);
         */
         
-        ImageButton backButton = (ImageButton) findViewById(R.id.findBackButton);
+        ImageButton backButton = (ImageButton) findViewById(R.id.inboxBackButton);
         backButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,7 +95,7 @@ public class ProfileListActivity extends Activity {
 
     }
     
-    class MyData {
+    public class MyData {
         public MyData(String spinnerText, String value) {
             this.spinnerText = spinnerText;
             this.value = value;

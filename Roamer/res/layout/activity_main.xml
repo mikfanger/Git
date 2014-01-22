@@ -97,7 +97,7 @@
         android:src="@drawable/myroamers" />
 
     <ImageButton
-        android:id="@+id/sendMessageButton"
+        android:id="@+id/checkInboxButton"
         android:layout_width="100dp"
         android:layout_height="85dp"
         android:layout_alignLeft="@+id/getMyRoamersButton"

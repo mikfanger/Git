@@ -40,7 +40,7 @@
             android:src="@drawable/roamer" />
 
         <ImageButton
-            android:id="@+id/findBackButton"
+            android:id="@+id/inboxBackButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -113,7 +113,7 @@
             tools:listitem="@android:layout/simple_spinner_dropdown_item" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/backFromEvents"
             android:layout_width="wrap_content"
             android:layout_height="5dp"
             android:layout_alignParentLeft="true"
