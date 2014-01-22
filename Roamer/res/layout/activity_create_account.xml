@@ -83,7 +83,7 @@
         android:src="@drawable/red_star_red" />
 
     <CheckBox
-        android:id="@+id/femaleCheck"
+        android:id="@+id/checkFemale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/checkMale"

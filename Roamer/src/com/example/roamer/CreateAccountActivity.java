@@ -13,6 +13,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -35,6 +36,9 @@ public class CreateAccountActivity extends Activity {
 	private String error;
 	
 	private static final String passNotEqual = "Passwords must match!";
+	private static final String noTerms = "You must agree to Terms and Conditions!";
+	private static final String sexWrong = "Cannot be male and female!";
+	private static final String noSex = "Must select a sex!";
 	private static final String fieldEmpty = "All fields must be filled!";
     private static final String invalidEmail = "Email addresses much contain @ symbol!";
 	
@@ -108,6 +112,26 @@ public class CreateAccountActivity extends Activity {
     	 {
     		 cancel = true;
     		 error = invalidEmail;
+    	 }
+    	 
+    	 CheckBox female = (CheckBox)findViewById(R.id.checkFemale);
+    	 CheckBox male = (CheckBox)findViewById(R.id.checkMale);
+    	 CheckBox terms = (CheckBox)findViewById(R.id.agreeCheck);
+    	 if (female.isChecked() && male.isChecked())
+    	 {
+    		 cancel = true;
+    		 error = sexWrong;
+    	 }
+    	 
+    	 if (!female.isChecked() && !male.isChecked())
+    	 {
+    		 cancel = true;
+    		 error = noSex;
+    	 }
+    	 if (!terms.isChecked())
+    	 {
+    		 cancel = true;
+    		 error = noTerms;
     	 }
 		
     	//Check that all fields are filled out

@@ -66,9 +66,10 @@ public class LoginActivity extends Activity {
 		PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerEmail", "NotSet").commit();
 		PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerPassword", "NotSet").commit();
 		
-		userName = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerEmail","");
-		passWord =  PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerPassword","");
-		
+		//userName = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerEmail","");
+		//passWord =  PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerPassword","");
+		userName = "jon@roamer.com";
+		passWord = "roam1";
 
 		setContentView(R.layout.activity_login);
 

@@ -127,15 +127,9 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
-            android:name="com.example.roamer.MyRoamersListActivity"
+            android:name="com.example.roamer.profilelist.MyRoamersListActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName="com.example.roamer.HomeScreenActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-        </activity>
-        <activity
-            android:name="com.example.roamer.EventsActivity"
-            android:label="@string/title_activity_events"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
@@ -153,10 +147,17 @@
             android:name="com.example.roamer.TestScrollTabActivity"
             android:label="@string/title_activity_test_scroll_tab" >
         </activity>
-        <activity
-            android:name="com.example.roamer.TestFixedTabActivity"
-            android:label="@string/title_activity_test_fixed_tab" 
-            android:screenOrientation="portrait"
+
+        <activity android:name=".EventsActivity"
+            android:label="@string/title_activity_events"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity android:name=".MyEvents"
+            android:label="@string/title_activity_events"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity android:name=".AllEvents"
+            android:label="@string/title_activity_events"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
     </application>
