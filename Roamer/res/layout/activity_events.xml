@@ -49,7 +49,7 @@
             android:layout_width="fill_parent"
             android:layout_height="40dp"
             android:background="@color/DarkGrey"
-            android:gravity="fill_horizontal|center_vertical|bottom|top" >
+            android:gravity="top|center_vertical|fill_horizontal" >
 
         </TabWidget>
 
@@ -59,7 +59,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.56"
             android:background="@color/DarkGrey"
-            android:padding="5dp" />
+            android:padding="0dp" >
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/sort" />
+
+        </FrameLayout>
     </LinearLayout>
 
 </TabHost>

@@ -64,17 +64,6 @@
         android:src="@drawable/findroamers" />
 
     <ImageButton
-        android:id="@+id/ExitButtonMain"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignTop="@+id/settingsButton"
-        android:layout_toRightOf="@+id/roamerCreateTag"
-        android:background="@color/transparent"
-        android:contentDescription="@string/app_name"
-        android:scaleType="fitCenter"
-        android:src="@drawable/exit_icon" />
-
-    <ImageButton
         android:id="@+id/checkEventsButton"
         android:layout_width="100dp"
         android:layout_height="85dp"
@@ -106,5 +95,27 @@
         android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"
         android:src="@drawable/inbox" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="49dp"
+        android:layout_marginRight="17dp"
+        android:background="@color/transparent"
+        android:src="@drawable/post" />
+
+    <ImageButton
+        android:id="@+id/ExitButtonMain"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/settingsButton"
+        android:layout_toRightOf="@+id/checkInboxButton"
+        android:background="@color/transparent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/exit_icon" />
 
 </RelativeLayout>

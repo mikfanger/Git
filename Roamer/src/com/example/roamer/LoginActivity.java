@@ -24,14 +24,6 @@ import android.widget.TextView;
  */
 public class LoginActivity extends Activity {
 	/**
-	 * A dummy authentication store containing known user names and passwords.
-	 * TODO: remove after connecting to a real authentication system.
-	 */
-	private static final String[] DUMMY_CREDENTIALS = new String[] {
-			"foo@example.com:hello", "bar@example.com:world" };
-	
-
-	/**
 	 * The default email to populate the email field with.
 	 */
 	public static final String EXTRA_EMAIL = "com.example.android.authenticatordemo.extra.EMAIL";
@@ -52,7 +44,7 @@ public class LoginActivity extends Activity {
 	// UI references.
 	private EditText mEmailView;
 	private EditText mPasswordView;
-	private View mLoginFormView;
+	//private View mLoginFormView;
 	private View mLoginStatusView;
 	private TextView mLoginStatusMessageView;
 	
@@ -68,8 +60,10 @@ public class LoginActivity extends Activity {
 		
 		//userName = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerEmail","");
 		//passWord =  PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerPassword","");
+		
+		//Set dummy username and password
 		userName = "jon@roamer.com";
-		passWord = "roam1";
+		passWord = "roam";
 
 		setContentView(R.layout.activity_login);
 
@@ -92,7 +86,6 @@ public class LoginActivity extends Activity {
 					}
 				});
 		
-		//mLoginFormView = findViewById(R.id.login_form);
 		mLoginStatusView = findViewById(R.id.login_status);
 		mLoginStatusMessageView = (TextView) findViewById(R.id.login_status_message);
 
@@ -127,6 +120,10 @@ public class LoginActivity extends Activity {
 	 * errors are presented and no actual login attempt is made.
 	 */
 	public void attemptLogin() {
+		
+		System.out.println("Entered Password is: " + mPassword);
+		System.out.println("Valid Password is: " + passWord);
+		
 		if (mAuthTask != null) {
 			return;
 		}
@@ -172,10 +169,14 @@ public class LoginActivity extends Activity {
 			}
 	
 		
-		//Check that email address match
-		if (!passWord.equals("mPassword")) {
+		//Check that password matches
+		if (!passWord.equals(mPassword.trim())) {
+			
+			System.out.println("Entered Password is: " + mPassword);
+			System.out.println("Valid Password is: " + passWord);
+			
 			mPasswordView.setError("Password does not match");
-			focusView = mEmailView;
+			focusView = mPasswordView;
 			cancel = true;
 			}
 
@@ -216,21 +217,10 @@ public class LoginActivity extends Activity {
 						}
 					});
 
-			mLoginFormView.setVisibility(View.VISIBLE);
-			mLoginFormView.animate().setDuration(shortAnimTime)
-					.alpha(show ? 0 : 1)
-					.setListener(new AnimatorListenerAdapter() {
-						@Override
-						public void onAnimationEnd(Animator animation) {
-							mLoginFormView.setVisibility(show ? View.GONE
-									: View.VISIBLE);
-						}
-					});
 		} else {
 			// The ViewPropertyAnimator APIs are not available, so simply show
 			// and hide the relevant UI components.
 			mLoginStatusView.setVisibility(show ? View.VISIBLE : View.GONE);
-			mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
 		}
 	}
 
@@ -250,13 +240,15 @@ public class LoginActivity extends Activity {
 				return false;
 			}
 
-			for (String credential : DUMMY_CREDENTIALS) {
-				String[] pieces = credential.split(":");
-				if (pieces[0].equals(mEmail)) {
+			
+				if (userName.equals(mEmail)) {
 					// Account exists, return true if the password matches.
-					return pieces[1].equals(mPassword);
+					
+					System.out.println("Entered Password is: " + mPassword);
+					System.out.println("Valid Password is: " + passWord);
+					
+					return passWord.equals(mPassword);
 				}
-			}
 
 			// TODO: register the new account here.
 			return true;
@@ -264,6 +256,10 @@ public class LoginActivity extends Activity {
 
 		@Override
 		protected void onPostExecute(final Boolean success) {
+			
+			System.out.println("Entered Password is: " + mPassword);
+			System.out.println("Valid Password is: " + passWord);
+			
 			mAuthTask = null;
 			showProgress(false);
 

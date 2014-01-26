@@ -134,7 +134,7 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
-            android:name="com.example.roamer.AllEventsActivity"
+            android:name="com.example.roamer.events.AllEventsActivity"
             android:label="@string/title_activity_all_events"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
@@ -148,15 +148,17 @@
             android:label="@string/title_activity_test_scroll_tab" >
         </activity>
 
-        <activity android:name=".EventsActivity"
+        <activity android:name="com.example.roamer.events.EventsActivity"
             android:label="@string/title_activity_events"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
-        <activity android:name=".MyEvents"
+
+        <activity android:name="com.example.roamer.events.AllEvents"
             android:label="@string/title_activity_events"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
-        <activity android:name=".AllEvents"
+        
+        <activity android:name="com.example.roamer.events.MyEvents"
             android:label="@string/title_activity_events"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>

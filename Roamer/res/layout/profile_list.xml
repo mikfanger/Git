@@ -118,6 +118,7 @@
             android:layout_height="5dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:layout_marginBottom="65dp"
             android:scaleType="centerCrop"
             android:src="@drawable/gray_gradient" />
 

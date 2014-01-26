@@ -2,6 +2,7 @@ package com.example.roamer;
 
 
 import com.example.roamer.checkinbox.InboxActivity;
+import com.example.roamer.events.EventsActivity;
 import com.example.roamer.profilelist.MyRoamersListActivity;
 import com.example.roamer.profilelist.ProfileListActivity;
 import android.os.Bundle;
