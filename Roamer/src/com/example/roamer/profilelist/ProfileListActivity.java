@@ -135,7 +135,8 @@ public class ProfileListActivity extends Activity {
              ids[i] = Integer.toString(i+1);
          }
 
-         ItemAdapter adapter = new ItemAdapter(this,R.layout.row, ids);
+         ItemAdapter adapter = new ItemAdapter(this,R.layout.row_roamer, ids);
          listView.setAdapter(adapter);
+         listView.setDivider(null);
     }
 }

@@ -146,15 +146,15 @@
         android:layout_width="7dp"
         android:layout_height="7dp"
         android:layout_alignTop="@+id/locationSpinner"
-        android:layout_toRightOf="@+id/textView4"
+        android:layout_toRightOf="@+id/textEventDate"
         android:src="@drawable/red_star_red" />
 
     <Spinner
         android:id="@+id/spinnerHotel"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/textEventDate"
+        android:layout_below="@+id/textEventDate"
         android:background="@drawable/field_entry" />
 
     <TextView
@@ -178,7 +178,7 @@
         android:src="@drawable/select_image" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textEventDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/spinnerAirline"

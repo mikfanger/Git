@@ -38,7 +38,7 @@ public class ItemAdapter extends ArrayAdapter<String> {
         View rowView = inflater.inflate(rowResourceId, parent, false);
         
         ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
-        TextView textView = (TextView) rowView.findViewById(R.id.textView);
+        TextView textView = (TextView) rowView.findViewById(R.id.textViewEventType);
 
         int id = Integer.parseInt(Ids[position]);
         String imageFile = Model.GetbyId(id).IconFile;

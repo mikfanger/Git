@@ -15,9 +15,7 @@
     <uses-permission android:name="android.permission.INTERNET" >
     </uses-permission>
 
-    <uses-sdk
-        android:minSdkVersion="11"
-        android:targetSdkVersion="19" />
+    <uses-sdk android:minSdkVersion="11" />
 
     <application
         android:allowBackup="true"
@@ -147,20 +145,24 @@
             android:name="com.example.roamer.TestScrollTabActivity"
             android:label="@string/title_activity_test_scroll_tab" >
         </activity>
-
-        <activity android:name="com.example.roamer.events.EventsActivity"
+        <activity
+            android:name="com.example.roamer.events.EventsActivity"
             android:label="@string/title_activity_events"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
-
-        <activity android:name="com.example.roamer.events.AllEvents"
+        <activity
+            android:name="com.example.roamer.events.AllEvents"
             android:label="@string/title_activity_events"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
-        
-        <activity android:name="com.example.roamer.events.MyEvents"
+        <activity
+            android:name="com.example.roamer.events.MyEvents"
             android:label="@string/title_activity_events"
             android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.events.TotalEventActivity"
+            android:label="@string/title_activity_total_event" >
         </activity>
     </application>
 

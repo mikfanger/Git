@@ -38,8 +38,8 @@ public class ItemAdapter extends ArrayAdapter<String> {
         View rowView = inflater.inflate(rowResourceId, parent, false);
         
         ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
-        TextView textView = (TextView) rowView.findViewById(R.id.textView);
-        TextView textViewLocation = (TextView) rowView.findViewById(R.id.textViewLocation);
+        TextView textView = (TextView) rowView.findViewById(R.id.textViewName);
+        TextView textViewLocation = (TextView) rowView.findViewById(R.id.textViewPosition);
         
         //Find current location
         //String location = 
@@ -49,13 +49,11 @@ public class ItemAdapter extends ArrayAdapter<String> {
         
   
         String imageFile = Model.GetbyId(id).IconFile;
-        System.out.println("printicon");
         
         textView.setText(Model.GetbyId(id).Name);
-        System.out.println("print name");
         
         textViewLocation.setText(Model.GetbyId(id).Location);
-        System.out.println("print location");
+      
         
         // get input stream
         InputStream ims = null;

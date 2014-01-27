@@ -97,7 +97,7 @@
         android:src="@drawable/inbox" />
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/imageButtonPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -111,8 +111,8 @@
         android:id="@+id/ExitButtonMain"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/settingsButton"
-        android:layout_toRightOf="@+id/checkInboxButton"
         android:background="@color/transparent"
         android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"

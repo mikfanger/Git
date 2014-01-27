@@ -41,5 +41,6 @@
     <string name="title_activity_my_events">MyEventsActivity</string>
     <string name="title_activity_test_scroll_tab">TestScrollTabActivity</string>
     <string name="title_activity_test_fixed_tab">TestFixedTabActivity</string>
+    <string name="title_activity_total_event">TotalEventActivity</string>
 
 </resources>

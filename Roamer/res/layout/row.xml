@@ -1,50 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
     android:gravity="center_vertical"
     android:minHeight="64dp" >
 
     <ImageView
         android:id="@+id/imageViewRowBackground"
         android:layout_width="300dp"
-        android:layout_height="75dp"
+        android:layout_height="125dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
-        android:padding="2dp"
         android:scaleType="fitXY"
         android:src="@drawable/field_entry" />
         
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="9dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@string/app_name" />
 
     <TextView
-        android:layout_alignBottom="@+id/imageView"
+        android:id="@+id/textViewEventType"
         android:layout_width="97dp"
         android:layout_height="32dp"
-        android:id="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="66dp"
-        android:layout_alignParentRight="true"
-        android:gravity="center_vertical"/>
-    
-    <TextView
         android:layout_alignBottom="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="32dp"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:layout_alignRight="@+id/textViewLocation"
+        android:gravity="center_vertical"
+        android:textColor="@color/DarkWhite" />
+
+    <TextView
         android:id="@+id/textViewLocation"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="170dp"
-        android:layout_alignParentRight="true"
-        android:gravity="center_vertical"/>
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_alignRight="@+id/imageViewRowBackground"
+        android:layout_below="@+id/textViewEventType"
+        android:layout_marginRight="27dp"
+        android:layout_marginTop="23dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/DarkWhite" />
+
+    <TextView
+        android:id="@+id/textChildDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewLocation"
+        android:layout_alignLeft="@+id/imageView"
+        android:text="Attending:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/Grey"
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="15dp"
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/Grey" />
+
+    <TextView
+        android:id="@+id/textEventDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textChildDate"
+        android:text="2/15/14"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/Grey" />
+
+    <TextView
+        android:id="@+id/textViewAttend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textEventDate"
+        android:layout_alignTop="@+id/textChildDate"
+        android:layout_marginLeft="14dp"
+        android:text="8"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/Grey"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textViewHost"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewEventType"
+        android:layout_alignBottom="@+id/textViewEventType"
+        android:layout_alignLeft="@+id/textEventDate"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/Grey"
+        android:textColorHint="@color/DarkWhite" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewEventType"
+        android:layout_below="@+id/textViewEventType"
+        android:text="at"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/Grey"
+        android:textStyle="italic" />
 
 </RelativeLayout>
