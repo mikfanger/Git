@@ -1,6 +1,5 @@
 package com.example.roamer;
 
-//import com.example.roamer.CreateAccountActivity.MyData;
 
 import android.os.Bundle;
 import android.preference.PreferenceManager;

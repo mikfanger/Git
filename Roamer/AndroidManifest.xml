@@ -162,7 +162,13 @@
         </activity>
         <activity
             android:name="com.example.roamer.events.TotalEventActivity"
-            android:label="@string/title_activity_total_event" >
+            android:label="@string/title_activity_total_event" 
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.checkinbox.DiscussActivity"
+            android:label="@string/title_activity_total_event" 
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
     </application>
 

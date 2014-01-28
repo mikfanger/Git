@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Model {
@@ -15,15 +16,26 @@ public class Model {
         Items = new ArrayList<Item>();
         
         File file = new File("messages.txt");
-        BufferedReader in = new BufferedReader(new FileReader(file));
         
-        while (in.ready())
+        if (file.exists())
         {
-        	String wholeLine = in.readLine();
-        	String[] lineArray  = wholeLine.split(",");
-        	Items.add(new Item(Integer.parseInt(lineArray[0]),lineArray[1],lineArray[2],lineArray[3]));
+        	String wholeLine;
+        	BufferedReader in = new BufferedReader(new FileReader(file));
+            
+            while (in.ready())
+            {
+            	wholeLine = in.readLine();
+            	String[] lineArray  = wholeLine.split(",");
+            	Items.add(new Item(Integer.parseInt(lineArray[0]),lineArray[1],lineArray[2],lineArray[3]));
+            }
+            in.close();
         }
-        in.close();
+        else
+        {
+        	PrintWriter writer = new PrintWriter("messages.txt", "UTF-8");
+        	writer.close();
+        }
+        
     }
 
     public static Item GetbyId(int id){

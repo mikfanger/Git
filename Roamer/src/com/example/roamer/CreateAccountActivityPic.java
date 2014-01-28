@@ -24,8 +24,6 @@ import android.widget.Spinner;
 
 public class CreateAccountActivityPic extends Activity {
 
-	//private static int RESULT_LOAD_IMAGE = 1;
-
 	
 	ImageView ivGalImg;
 	Bitmap bmp = null;;
