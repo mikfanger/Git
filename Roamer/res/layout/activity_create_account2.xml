@@ -5,7 +5,7 @@
     android:background="@color/DarkGrey" >
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageChildImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -58,7 +58,7 @@
         android:id="@+id/submitInfo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageView1"
+        android:layout_above="@+id/imageChildImage"
         android:layout_marginBottom="14dp"
         android:layout_toRightOf="@+id/backFromEvents"
         android:background="@color/transparent"

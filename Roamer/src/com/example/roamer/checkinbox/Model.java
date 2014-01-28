@@ -1,20 +1,29 @@
 package com.example.roamer.checkinbox;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Model {
 
     public static ArrayList<Item> Items;
 
-    public static void LoadModel() {
+    public static void LoadModel() throws NumberFormatException, IOException {
 
         Items = new ArrayList<Item>();
-        Items.add(new Item(1, "pic1.png", "Message1"));
-        Items.add(new Item(2, "pic2.png", "Message2"));
-        Items.add(new Item(3, "pic3.png", "Message3"));
-        Items.add(new Item(4, "pic4.png", "Message4"));
-        Items.add(new Item(5, "pic5.png", "Message5"));
-
+        
+        File file = new File("messages.txt");
+        BufferedReader in = new BufferedReader(new FileReader(file));
+        
+        while (in.ready())
+        {
+        	String wholeLine = in.readLine();
+        	String[] lineArray  = wholeLine.split(",");
+        	Items.add(new Item(Integer.parseInt(lineArray[0]),lineArray[1],lineArray[2],lineArray[3]));
+        }
+        in.close();
     }
 
     public static Item GetbyId(int id){

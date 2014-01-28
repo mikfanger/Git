@@ -16,7 +16,7 @@
         android:textColor="@color/DarkWhite" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageChildImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -29,7 +29,7 @@
         android:id="@+id/textStepTwo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
+        android:layout_below="@+id/imageChildImage"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:text="Roamer is designed to connect like-minded travelers.  Whether in the air or on the road, life moves quickly.  As Roamers, work can quickly consume our entire day."

@@ -6,7 +6,7 @@
     android:background="@color/DarkGrey" >
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageChildImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -18,7 +18,7 @@
         android:id="@+id/agreeCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageView1"
+        android:layout_above="@+id/imageChildImage"
         android:layout_alignParentLeft="true"
         android:text="I agree to"
         android:textColor="@color/DarkWhite"

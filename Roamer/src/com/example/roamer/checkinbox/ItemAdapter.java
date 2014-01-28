@@ -37,13 +37,15 @@ public class ItemAdapter extends ArrayAdapter<String> {
 
         View rowView = inflater.inflate(rowResourceId, parent, false);
         
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
-        TextView textView = (TextView) rowView.findViewById(R.id.textViewEventType);
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.imageInboxPicture);
+        TextView textView = (TextView) rowView.findViewById(R.id.textInboxName);
+        TextView textDate= (TextView) rowView.findViewById(R.id.textRecentDate);
 
         int id = Integer.parseInt(Ids[position]);
         String imageFile = Model.GetbyId(id).IconFile;
 
         textView.setText(Model.GetbyId(id).Name);
+        textDate.setText(Model.GetbyId(id).Date);
         // get input stream
         InputStream ims = null;
         try {

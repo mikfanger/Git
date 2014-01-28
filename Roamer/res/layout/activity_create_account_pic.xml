@@ -6,7 +6,7 @@
     tools:context=".CreateAccountActivityPic" >
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageChildImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -62,8 +62,8 @@
         android:id="@+id/imageView7"
         android:layout_width="7dp"
         android:layout_height="7dp"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
+        android:layout_alignTop="@+id/textRecentDate"
+        android:layout_toRightOf="@+id/textRecentDate"
         android:src="@drawable/red_star_red" />
 
     <ImageView
@@ -95,7 +95,7 @@
         android:src="@drawable/back" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textRecentDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/locationSpinner"
@@ -118,8 +118,8 @@
         android:id="@+id/spinnerJob"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textRecentDate"
+        android:layout_below="@+id/textRecentDate"
         android:background="@drawable/field_entry" />
 
     <Spinner
@@ -134,7 +134,7 @@
         android:id="@+id/finishProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageView1"
+        android:layout_above="@+id/imageChildImage"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="20dp"

@@ -37,7 +37,7 @@ public class ItemAdapter extends ArrayAdapter<String> {
 
         View rowView = inflater.inflate(rowResourceId, parent, false);
         
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.imageInboxPicture);
         TextView textView = (TextView) rowView.findViewById(R.id.textViewName);
         TextView textViewLocation = (TextView) rowView.findViewById(R.id.textViewPosition);
         
