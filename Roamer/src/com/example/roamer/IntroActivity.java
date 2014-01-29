@@ -2,6 +2,11 @@ package com.example.roamer;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
+
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -35,6 +40,7 @@ public class IntroActivity extends Activity {
         introButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+            	           	
             	
             	Intent i=new Intent(IntroActivity.this,LoginActivity.class);
                 startActivity(i);
