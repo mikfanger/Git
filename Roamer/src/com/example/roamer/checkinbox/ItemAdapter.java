@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import com.example.roamer.R;
+import com.example.roamer.profilelist.MyRoamerModel;
 
 public class ItemAdapter extends ArrayAdapter<String> {
 
@@ -42,10 +43,10 @@ public class ItemAdapter extends ArrayAdapter<String> {
         TextView textDate= (TextView) rowView.findViewById(R.id.textRecentDate);
 
         int id = Integer.parseInt(Ids[position]);
-        String imageFile = Model.GetbyId(id).IconFile;
+        String imageFile = MyRoamerModel.GetbyId(id).IconFile;
 
-        textView.setText(Model.GetbyId(id).Name);
-        textDate.setText(Model.GetbyId(id).Date);
+        textView.setText(MyRoamerModel.GetbyId(id).Name);
+        //textDate.setText(MyroamerModel.GetbyId(id).Date);
         // get input stream
         InputStream ims = null;
         try {

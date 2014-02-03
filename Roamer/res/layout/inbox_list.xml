@@ -62,7 +62,7 @@
 
         <RelativeLayout
             android:layout_width="300dp"
-            android:layout_height="400dp"
+            android:layout_height="fill_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/imageView2" >
@@ -70,11 +70,13 @@
             <ListView
                 android:id="@+id/listView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="450dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginBottom="45dp"
                 android:cacheColorHint="@color/DarkWhite"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="5.0sp"
                 tools:listitem="@android:layout/simple_expandable_list_item_1" >
 
             </ListView>
@@ -85,7 +87,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:text="New Chat" />
+                android:layout_marginBottom="10dp"
+                android:background="@color/Red"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="New Chat"
+                android:textSize="25sp" />
 
         </RelativeLayout>
 

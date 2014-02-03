@@ -6,10 +6,5 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
-	<classpathentry kind="lib" path="/CodeLabEx1-starter/war/WEB-INF/lib/appengine-api-1.0-sdk-1.8.9.jar"/>
-	<classpathentry kind="lib" path="/CodeLabEx1-starter/war/WEB-INF/lib/appengine-api-labs.jar"/>
-	<classpathentry kind="lib" path="/CodeLabEx1-starter/war/WEB-INF/lib/appengine-endpoints-deps.jar"/>
-	<classpathentry kind="lib" path="/CodeLabEx1-starter/war/WEB-INF/lib/appengine-endpoints.jar"/>
-	<classpathentry kind="lib" path="/CodeLabEx1-starter/war/WEB-INF/lib/appengine-jsr107cache-1.8.9.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

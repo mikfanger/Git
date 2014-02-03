@@ -1,9 +1,9 @@
 package com.example.roamer.checkinbox;
 
-import java.io.IOException;
 
 import com.example.roamer.HomeScreenActivity;
 import com.example.roamer.R;
+import com.example.roamer.profilelist.MyRoamerModel;
 
 
 import android.app.Activity;
@@ -11,16 +11,18 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Spinner;
+
 
 public class InboxActivity extends Activity {
 
@@ -34,18 +36,11 @@ public class InboxActivity extends Activity {
         this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.inbox_list);
 
-        try {
-			Model.LoadModel();
-		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+        MyRoamerModel.LoadModel();
         
         listView = (ListView) findViewById(R.id.listView);
-        String[] ids = new String[Model.Items.size()];
+        String[] ids = new String[MyRoamerModel.Items.size()];
         for (int i= 0; i < ids.length; i++){
 
             ids[i] = Integer.toString(i+1);
@@ -53,6 +48,8 @@ public class InboxActivity extends Activity {
 
         ItemAdapter adapter = new ItemAdapter(this,R.layout.row_message, ids);
         listView.setAdapter(adapter);
+        
+        listView.setLongClickable(true);
         
         ImageButton inboxButton = (ImageButton) findViewById(R.id.inboxBackButton);
         inboxButton.setOnClickListener(new OnClickListener() {
@@ -64,44 +61,40 @@ public class InboxActivity extends Activity {
             		  
             }
         });
-      /*  
-		//Region
-        Spinner position = (Spinner) findViewById(R.id.spinnerSelectRoamer);
-        //Prepare adapter 
-        //HERE YOU CAN ADD ITEMS WHICH COMES FROM SERVER.
-        final MyData items1[] = new MyData[5];
         
-        for(int i = 0; i < MyRoamerModel.Items.size()-1; i++)
-        {
-        	String roamerName = MyRoamerModel.GetbyId(i).Name;
-        	System.out.println("Item name is: " + roamerName);
-	        items1[i] = new MyData(roamerName, "");
-        }
-      
-        items1[0] = new MyData("Steve", "value1");
-        items1[1] = new MyData("Joe", "value2");
-        items1[2] = new MyData("Bart", "value3");
-        items1[3] = new MyData("Mike", "value2");
-        items1[4] = new MyData("Forest", "value3");
-        ArrayAdapter<MyData> adapter1 = new ArrayAdapter<MyData>(this,
-                android.R.layout.simple_spinner_item, items1);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        position.setAdapter(adapter1);
-        position.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view,
-                    int position, long id) {
-                MyData d = items1[position];
+        listView.setOnItemLongClickListener(new OnItemLongClickListener() {
 
-                //Get selected value of key 
-                String value = d.getValue();
-                String key = d.getSpinnerText();
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                    int pos, long id) {
+                // TODO Auto-generated method stub
+            	
+            	final Dialog dialog = new Dialog(context);
+            	
+    			dialog.setContentView(R.layout.dialog_clear_chat);
+    			dialog.setTitle("Clear Chat History");
+    			
+    			dialog.show();
+    			
+    			Button dialogButton = (Button) dialog.findViewById(R.id.imageClearChat);
+    			// if button is clicked, close the custom dialog
+    			dialogButton.setOnClickListener(new OnClickListener() {
+    				@Override
+    				public void onClick(View v) {
+    					
+    					String name = "None";
+    					//name = MyRoamerModel.GetbyId(pos+1).Name;
+    					clearChat(name);
+    					dialog.dismiss();
+    				}
+    			});
+
+                Log.v("long clicked","pos: " + pos);
+
+                return true;
             }
-
-			@Override
-			public void onNothingSelected(AdapterView<?> arg0) {
-			}
-        });
-        */
+        }); 
+        
+        
         Button messageButton = (Button) findViewById(R.id.newMessageButton);
         messageButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -159,6 +152,13 @@ public class InboxActivity extends Activity {
 
         String spinnerText;
         String value;
+    }
+    
+    public void clearChat(String name){
+    	
+    	SQLiteDatabase db = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
+		db.delete("ChatTable", null, null);
+		db.close();
     }
     
     public boolean onCreateOptionsMenu(Menu menu) {

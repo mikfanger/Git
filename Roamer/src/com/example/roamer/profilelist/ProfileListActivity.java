@@ -137,6 +137,5 @@ public class ProfileListActivity extends Activity {
 
          ItemAdapter adapter = new ItemAdapter(this,R.layout.row_roamer, ids);
          listView.setAdapter(adapter);
-         listView.setDivider(null);
     }
 }

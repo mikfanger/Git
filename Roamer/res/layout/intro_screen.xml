@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/StartRoamerButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="85dp"
         android:text="@string/credit_tag"
         android:textColor="@color/black" />
 

@@ -62,7 +62,7 @@
     android:layout_height="202dp"
     android:layout_above="@+id/newUser"
     android:layout_alignLeft="@+id/login"
-    android:layout_marginBottom="22dp"
+    android:layout_marginBottom="45dp"
     android:contentDescription="@string/app_name"
     android:src="@drawable/logo_friends" />
 
