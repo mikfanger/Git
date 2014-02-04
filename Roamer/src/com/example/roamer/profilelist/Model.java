@@ -2,6 +2,7 @@ package com.example.roamer.profilelist;
 
 import java.util.ArrayList;
 
+
 public class Model {
 
 	
@@ -76,5 +77,5 @@ public class Model {
         }
         return null;
     }
-
+    
 }

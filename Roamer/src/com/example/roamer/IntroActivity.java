@@ -1,6 +1,5 @@
 package com.example.roamer;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
@@ -23,17 +22,8 @@ public class IntroActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	
-    	final String fileName = "CurrentUser.txt";
-    	final File currentDir = new File("user_info");
-    	final File file = new File (currentDir, fileName);
     	final String chatTable = "ChatTable";
     	final String myRoamersTable = "MyRoamers";
-    	try {
-			file.createNewFile();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
     	
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -42,6 +32,7 @@ public class IntroActivity extends Activity {
         SQLiteDatabase myDB = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
 
         /* Create a chat Table in the Database. */
+        myDB.delete(myRoamersTable, null, null);
         myDB.execSQL("CREATE TABLE IF NOT EXISTS "
           + chatTable
           + " (Field1 VARCHAR,Field2 INT(1));");
@@ -49,6 +40,7 @@ public class IntroActivity extends Activity {
         myDB.execSQL("CREATE TABLE IF NOT EXISTS "
                 + myRoamersTable
                 + " (Field1 VARCHAR, Field2 VARCAHR, Field3 VARCHAR);");
+        
         
         
         ImageButton introButton = (ImageButton) findViewById(R.id.StartRoamerButton);

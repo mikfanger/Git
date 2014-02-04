@@ -63,6 +63,7 @@ public class CreateAccountActivity2 extends Activity {
 	                android.R.layout.simple_spinner_item, items1);
 	        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 	        position.setAdapter(adapter1);
+	        
 	        position.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 	            public void onItemSelected(AdapterView<?> parent, View view,
 	                    int position, long id) {

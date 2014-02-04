@@ -11,6 +11,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,15 +20,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 
 public class InboxActivity extends Activity {
 
     ListView listView;
     final Context context = this;
+    private String selectedName;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -94,6 +98,46 @@ public class InboxActivity extends Activity {
             }
         }); 
         
+        //Populate spinner with rows of MyRoamer database       
+        Spinner position = (Spinner) findViewById(R.id.spinnerSelectRoamer);
+        
+        
+        final MyData items1[] = new MyData[getRowCount("MyRoamers")];
+        
+        for(int i = 0; i<getRowCount("MyRoamers");i++)
+        {
+        	String name =Integer.toString(i);
+        	items1[i] = new MyData(getRoamerName(name),"value");
+        }
+        
+        System.out.println("Items length is: "+items1.length);
+        if(items1.length == 0)
+        {
+        	System.out.println("length of items is 0");
+            items1[0] = new MyData("Steve","value1");
+        }
+
+        ArrayAdapter<MyData> adapter1 = new ArrayAdapter<MyData>(this,
+                android.R.layout.simple_spinner_item, items1);
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        position.setAdapter(adapter1);
+        
+        //Check for selected items
+        position.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view,
+                    int position, long id) {
+                MyData d = items1[position];
+
+                //Get selected value of item 
+                String value = d.getValue();
+                String key = d.getSpinnerText();
+                selectedName = key;
+            }
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+			}
+        });
         
         Button messageButton = (Button) findViewById(R.id.newMessageButton);
         messageButton.setOnClickListener(new OnClickListener() {
@@ -104,9 +148,7 @@ public class InboxActivity extends Activity {
             	
     			dialog.setContentView(R.layout.select_roamer_for_message);
     			dialog.setTitle("Select Roamer");
-    			
 
-    			
     			dialog.show();
     			
     			ImageButton dialogButton = (ImageButton) dialog.findViewById(R.id.imageStartMessage);
@@ -114,12 +156,9 @@ public class InboxActivity extends Activity {
     			dialogButton.setOnClickListener(new OnClickListener() {
     				@Override
     				public void onClick(View v) {
-    					
-    					/*
-    					int spinnerPos;
-    					Spinner position = (Spinner) dialog.findViewById(R.id.spinnerSelectRoamer);
-    	            	String spin = position.getSelectedItem().toString();
-    	            	*/
+    					    	            	
+    					createTable(selectedName);
+    					    					
     					dialog.dismiss();
     					Intent i=new Intent(InboxActivity.this,DiscussActivity.class);
     	                startActivity(i);
@@ -159,6 +198,29 @@ public class InboxActivity extends Activity {
     	SQLiteDatabase db = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
 		db.delete("ChatTable", null, null);
 		db.close();
+    }
+    
+    public void createTable(String tableName){
+    	SQLiteDatabase db = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
+    	
+    	db.execSQL("CREATE TABLE IF NOT EXISTS "
+		          + tableName
+		          + " (Field1 VARCHAR,Field2 INT(1));");
+    	db.close();
+    }
+    
+    public int getRowCount(String tableName){
+    	SQLiteDatabase db = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
+    	int count = 0;
+    	Cursor c = db.rawQuery("select * from "+tableName,null);
+    	count = c.getCount();
+    			return count;
+    }
+    
+    public String getRoamerName(String row){
+    	SQLiteDatabase db = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
+    	Cursor c = db.rawQuery("SELECT Field1 FROM MyRoamers WHERE rowid="+row,null);
+    	return c.toString();
     }
     
     public boolean onCreateOptionsMenu(Menu menu) {
