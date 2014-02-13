@@ -6,89 +6,91 @@
     android:contentDescription="@string/credit_tag"
     tools:context=".LoginActivity" >
 
-    <LinearLayout
-        android:id="@+id/login_status"
+    <ImageButton
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:visibility="gone" >
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/action_settings"
+        android:src="@drawable/login" />
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" 
-            android:layout_marginLeft="10dp"
-            />
+    <ImageButton
+        android:id="@+id/newUser"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fillLocation"
+        android:layout_alignLeft="@+id/roamerFriends"
+        android:layout_marginBottom="28dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/check_inbox_button"
+        android:src="@drawable/create_account" />
 
-        <TextView
-            android:id="@+id/login_status_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="10dp"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/login_progress_signing_in"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/roamerFriends"
+        android:layout_width="171dp"
+        android:layout_height="202dp"
+        android:layout_above="@+id/newUser"
+        android:layout_alignLeft="@+id/login"
+        android:layout_marginBottom="45dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo_friends" />
 
-<ImageButton
-    android:id="@+id/login"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="34dp"
-    android:background="@color/transparent"
-    android:contentDescription="@string/action_settings"
-    android:src="@drawable/login" />
+    <EditText
+        android:id="@+id/fillLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/password2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:background="@color/DarkWhite"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress" />
 
-<ImageButton
-    android:id="@+id/newUser"
-    android:layout_width="164dp"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/fillLocation"
-    android:layout_alignLeft="@+id/roamerFriends"
-    android:layout_marginBottom="28dp"
-    android:background="@color/transparent"
-    android:contentDescription="@string/check_inbox_button"
-    android:src="@drawable/create_account" />
+    <EditText
+        android:id="@+id/password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login"
+        android:layout_alignLeft="@+id/fillLocation"
+        android:layout_alignRight="@+id/fillLocation"
+        android:layout_marginBottom="22dp"
+        android:background="@color/DarkWhite"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
 
-<ImageView
-    android:id="@+id/roamerFriends"
-    android:layout_width="171dp"
-    android:layout_height="202dp"
-    android:layout_above="@+id/newUser"
-    android:layout_alignLeft="@+id/login"
-    android:layout_marginBottom="45dp"
-    android:contentDescription="@string/app_name"
-    android:src="@drawable/logo_friends" />
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/password2"
+        android:layout_below="@+id/password2"
+        android:layout_marginTop="-12dp"
+        android:text="Save Login Information"
+        android:textColor="@color/NewBlack" />
 
-<EditText
-    android:id="@+id/fillLocation"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/password2"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="18dp"
-    android:background="@color/DarkWhite"
-    android:ems="10"
-    android:hint="Email Address"
-    android:inputType="textEmailAddress" />
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp" 
+        android:visibility="gone" />
 
-<EditText
-    android:id="@+id/password2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/login"
-    android:layout_alignLeft="@+id/fillLocation"
-    android:layout_alignRight="@+id/fillLocation"
-    android:layout_marginBottom="22dp"
-    android:background="@color/DarkWhite"
-    android:ems="10"
-    android:hint="Password"
-    android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/login_status_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/progressBar1"
+        android:layout_below="@+id/progressBar1"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/login_progress_signing_in"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:visibility="gone" />
 
-  </RelativeLayout>
+</RelativeLayout>

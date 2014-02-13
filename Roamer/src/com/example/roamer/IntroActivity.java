@@ -17,13 +17,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
-public class IntroActivity extends Activity {
+public class IntroActivity extends Activity { 
 
-    @Override
+	  
+    @Override 
     protected void onCreate(Bundle savedInstanceState) {
     	
     	final String chatTable = "ChatTable";
     	final String myRoamersTable = "MyRoamers";
+    	final String myCredTable = "MyCred";
+    	final String myLocationTable = "MyLocation";
     	
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -32,14 +35,24 @@ public class IntroActivity extends Activity {
         SQLiteDatabase myDB = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
 
         /* Create a chat Table in the Database. */
-        myDB.delete(myRoamersTable, null, null);
+        //myDB.delete(myRoamersTable, null, null);
         myDB.execSQL("CREATE TABLE IF NOT EXISTS "
           + chatTable
           + " (Field1 VARCHAR,Field2 INT(1));");
         
         myDB.execSQL("CREATE TABLE IF NOT EXISTS "
                 + myRoamersTable
-                + " (Field1 VARCHAR, Field2 VARCAHR, Field3 VARCHAR);");
+                + " (Field1 VARCHAR, Field2 VARCHAR, Field3 VARCHAR);");
+        
+        myDB.execSQL("CREATE TABLE IF NOT EXISTS "
+                + myLocationTable
+                + " (Field1 VARCHAR, Field2 VARCHAR, Field3 VARCHAR);");
+        
+        myDB.execSQL("CREATE TABLE IF NOT EXISTS "
+                + myCredTable
+                + " (Field1 VARCHAR, Field2 VARCHAR, Field3 VARCHAR);");
+        
+       myDB.close();
         
         
         

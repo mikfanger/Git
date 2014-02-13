@@ -15,7 +15,9 @@
     <uses-permission android:name="android.permission.INTERNET" >
     </uses-permission>
 
-    <uses-sdk android:minSdkVersion="9"  android:targetSdkVersion="19"/>
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
@@ -162,12 +164,17 @@
         </activity>
         <activity
             android:name="com.example.roamer.events.TotalEventActivity"
-            android:label="@string/title_activity_total_event" 
+            android:label="@string/title_activity_total_event"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.example.roamer.checkinbox.DiscussActivity"
-            android:label="@string/title_activity_total_event" 
+            android:label="@string/title_activity_total_event"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.roamer.RoamerProfileActivity"
+            android:label="@string/title_activity_roamer_profile" 
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
     </application>

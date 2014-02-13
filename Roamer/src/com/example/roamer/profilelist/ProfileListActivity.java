@@ -4,6 +4,8 @@ import com.example.roamer.HomeScreenActivity;
 import com.example.roamer.R;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -15,10 +17,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class ProfileListActivity extends Activity {
 
     ListView listView;
+    final Context context = this;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -92,6 +96,8 @@ public class ProfileListActivity extends Activity {
     			public void onNothingSelected(AdapterView<?> parent){
     			}
 		});
+        
+       
 
     }
     
@@ -137,5 +143,36 @@ public class ProfileListActivity extends Activity {
 
          ItemAdapter adapter = new ItemAdapter(this,R.layout.row_roamer, ids);
          listView.setAdapter(adapter);
+         
+         //Add Roamer if selected
+		 listView.setOnItemClickListener(new OnItemClickListener() {
+	            public void onItemClick(AdapterView<?> parent, View view,
+	                int position, long id) {
+	            	
+	              // When clicked, show a dialog with event information
+	            	
+	            	
+	            	final Dialog dialog = new Dialog(context);
+	            	
+	    			dialog.setContentView(R.layout.activity_roamer_profile);
+	    			dialog.setTitle("Roamer Profile");
+	    			
+	            
+	    			dialog.show();
+	    			
+	    			ImageButton dialogButton = (ImageButton) dialog.findViewById(R.id.imageAddRoamer);
+	    			// if button is clicked, close the custom dialog
+	    			dialogButton.setOnClickListener(new OnClickListener() {
+	    				@Override
+	    				public void onClick(View v) {
+	    					dialog.dismiss();
+	    				}
+	    			});
+
+	            }
+
+	            public void onNothingSelected(AdapterView<?> parent){
+				}
+	          });
     }
 }

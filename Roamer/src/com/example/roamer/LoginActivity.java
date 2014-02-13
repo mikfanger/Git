@@ -6,6 +6,8 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -62,8 +64,33 @@ public class LoginActivity extends Activity {
 		//passWord =  PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerPassword","");
 		
 		//Set dummy username and password
-		userName = "jon@roamer.com";
-		passWord = "roam";
+		//userName = "jon@roamer.com";
+		//passWord = "roam";
+		
+		//Get defauly cred from database
+		   SQLiteDatabase myDB = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
+		   
+		   //Add default credentials		   
+	        myDB.execSQL("INSERT INTO "
+				       + "MyCred "
+				       + "(Field1,Field2) "
+				       + "VALUES ('jon@roamer.com', 'roam' );");
+	        
+		   Cursor c = myDB.rawQuery("SELECT * FROM " + "MyCred" , null);
+
+		   int Column1 = c.getColumnIndex("Field1");
+		   System.out.println("column 1 is: " + Column1);
+		   
+		   int Column2 = c.getColumnIndex("Field2");
+		   System.out.println("column 1 is: " + Column1);
+
+		   
+		   c.moveToFirst();
+		   
+		   passWord = c.getString(Column2);
+		   userName = c.getString(Column1);
+		  
+		   myDB.close();
 
 		setContentView(R.layout.activity_login);
 
@@ -86,7 +113,7 @@ public class LoginActivity extends Activity {
 					}
 				});
 		
-		mLoginStatusView = findViewById(R.id.login_status);
+		mLoginStatusView = findViewById(R.id.progressBar1);
 		mLoginStatusMessageView = (TextView) findViewById(R.id.login_status_message);
 
 		findViewById(R.id.login).setOnClickListener(
