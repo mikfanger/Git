@@ -99,18 +99,6 @@
         android:src="@drawable/selector_inbox" />
 
     <ImageButton
-        android:id="@+id/ExitButtonMain"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/settingsButton"
-        android:layout_marginRight="20dp"
-        android:background="@color/transparent"
-        android:contentDescription="@string/app_name"
-        android:scaleType="fitCenter"
-        android:src="@drawable/exit_icon" />
-
-    <ImageButton
         android:id="@+id/imageButtonPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,7 +106,7 @@
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/textView1"
         android:background="@color/transparent"
-        android:src="@drawable/post" />
+        android:src="@drawable/selector_post_event" />
 
     <TextView
         android:id="@+id/textView1"

@@ -22,54 +22,46 @@
         android:layout_width="164dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/fillLocation"
-        android:layout_alignLeft="@+id/roamerFriends"
+        android:layout_alignLeft="@+id/login"
         android:layout_marginBottom="28dp"
         android:background="@color/transparent"
         android:contentDescription="@string/check_inbox_button"
         android:src="@drawable/create_account" />
 
-    <ImageView
-        android:id="@+id/roamerFriends"
-        android:layout_width="171dp"
-        android:layout_height="202dp"
-        android:layout_above="@+id/newUser"
-        android:layout_alignLeft="@+id/login"
-        android:layout_marginBottom="45dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/logo_friends" />
-
     <EditText
-        android:id="@+id/fillLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/password2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp"
-        android:background="@color/DarkWhite"
-        android:ems="10"
-        android:hint="Email Address"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/password2"
+        android:id="@+id/passwordLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/login"
         android:layout_alignLeft="@+id/fillLocation"
         android:layout_alignRight="@+id/fillLocation"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="60dp"
         android:background="@color/DarkWhite"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword" />
 
-    <CheckBox
-        android:id="@+id/checkBox1"
+    <EditText
+        android:id="@+id/fillLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/password2"
-        android:layout_below="@+id/password2"
-        android:layout_marginTop="-12dp"
+        android:layout_above="@+id/passwordLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:background="@color/DarkWhite"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress" >
+
+        <requestFocus />
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/checkSaveLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login"
+        android:layout_alignLeft="@+id/passwordLogin"
         android:text="Save Login Information"
         android:textColor="@color/NewBlack" />
 
@@ -78,19 +70,30 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="10dp" 
+        android:layout_above="@+id/newUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
         android:visibility="gone" />
 
     <TextView
         android:id="@+id/login_status_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/progressBar1"
-        android:layout_below="@+id/progressBar1"
+        android:layout_alignBottom="@+id/newUser"
+        android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-light"
         android:text="@string/login_progress_signing_in"
-        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_above="@+id/newUser"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/logo_friends" />
 
 </RelativeLayout>

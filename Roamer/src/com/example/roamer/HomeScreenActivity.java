@@ -2,6 +2,7 @@ package com.example.roamer;
 
 
 import com.example.roamer.checkinbox.InboxActivity;
+import com.example.roamer.events.CreateEventActivity;
 import com.example.roamer.events.EventsActivity;
 import com.example.roamer.profilelist.MyRoamersListActivity;
 import com.example.roamer.profilelist.ProfileListActivity;
@@ -84,22 +85,17 @@ public class HomeScreenActivity extends Activity {
             }
         });
         
-        
-        ImageButton exitMainButton = (ImageButton) findViewById(R.id.ExitButtonMain);
-        exitMainButton.setOnClickListener(new OnClickListener() {
+        ImageButton postButton = (ImageButton) findViewById(R.id.imageButtonPost);
+        postButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
             	
-  
-            	Intent startMain = new Intent(Intent.ACTION_MAIN);
-            	startMain.addCategory(Intent.CATEGORY_HOME);
-            	startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            	startActivity(startMain);
-            	finish();
-                System.exit(0);
+            	Intent i=new Intent(HomeScreenActivity.this,CreateEventActivity.class);
+                startActivity(i);
+            		  
             }
-        }); 
-
+        });
+        
     }
      
     @Override

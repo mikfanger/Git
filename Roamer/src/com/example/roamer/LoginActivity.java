@@ -17,6 +17,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class LoginActivity extends Activity {
 	 * The default email to populate the email field with.
 	 */
 	public static final String EXTRA_EMAIL = "com.example.android.authenticatordemo.extra.EMAIL";
+	CheckBox cred;
 
 	/**
 	 * Keep track of the login task to ensure we can cancel it if requested.
@@ -57,15 +59,7 @@ public class LoginActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		
-		PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerEmail", "NotSet").commit();
-		PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("RoamerPassword", "NotSet").commit();
-		
-		//userName = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerEmail","");
-		//passWord =  PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("RoamerPassword","");
-		
-		//Set dummy username and password
-		//userName = "jon@roamer.com";
-		//passWord = "roam";
+
 		
 		//Get defauly cred from database
 		   SQLiteDatabase myDB = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
@@ -77,7 +71,8 @@ public class LoginActivity extends Activity {
 				       + "VALUES ('jon@roamer.com', 'roam' );");
 	        
 		   Cursor c = myDB.rawQuery("SELECT * FROM " + "MyCred" , null);
-
+		   c.moveToFirst();
+		   
 		   int Column1 = c.getColumnIndex("Field1");
 		   System.out.println("column 1 is: " + Column1);
 		   
@@ -85,7 +80,7 @@ public class LoginActivity extends Activity {
 		   System.out.println("column 1 is: " + Column1);
 
 		   
-		   c.moveToFirst();
+		   
 		   
 		   passWord = c.getString(Column2);
 		   userName = c.getString(Column1);
@@ -93,13 +88,18 @@ public class LoginActivity extends Activity {
 		   myDB.close();
 
 		setContentView(R.layout.activity_login);
-
+		
+		cred = (CheckBox)findViewById(R.id.checkSaveLogin);
+		
+		saveCredIfChecked();
+		
+		int checkStatus = checkForSavedCred();
 		// Set up the login form.
 		mEmail = getIntent().getStringExtra(EXTRA_EMAIL);
 		mEmailView = (EditText) findViewById(R.id.fillLocation);
 		mEmailView.setText(mEmail);
 
-		mPasswordView = (EditText) findViewById(R.id.password2);	
+		mPasswordView = (EditText) findViewById(R.id.passwordLogin);	
 		mPasswordView
 				.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 					@Override
@@ -113,6 +113,10 @@ public class LoginActivity extends Activity {
 					}
 				});
 		
+		if (checkStatus == 1){
+			mEmailView.setText(userName);
+			mPasswordView.setText(passWord);
+		}
 		mLoginStatusView = findViewById(R.id.progressBar1);
 		mLoginStatusMessageView = (TextView) findViewById(R.id.login_status_message);
 
@@ -148,8 +152,8 @@ public class LoginActivity extends Activity {
 	 */
 	public void attemptLogin() {
 		
-		System.out.println("Entered Password is: " + mPassword);
-		System.out.println("Valid Password is: " + passWord);
+		
+		
 		
 		if (mAuthTask != null) {
 			return;
@@ -160,6 +164,8 @@ public class LoginActivity extends Activity {
 		mPasswordView.setError(null);
 
 		// Store values at the time of the login attempt.
+		
+		
 		mEmail = mEmailView.getText().toString();
 		mPassword = mPasswordView.getText().toString();
 
@@ -305,5 +311,54 @@ public class LoginActivity extends Activity {
 			mAuthTask = null;
 			showProgress(false);
 		}
+	}
+	
+	public void saveCredIfChecked(){
+		
+		
+		//Check to see if cred is saved
+		int credSave = 0;
+		
+		SQLiteDatabase myDB = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
+		  Cursor c = myDB.rawQuery("SELECT * FROM " + "MyCred ", null);
+		  c.moveToFirst();
+
+		 int Column1 = c.getColumnIndex("Field4");
+		 credSave = c.getInt(Column1);
+		if(credSave == 1){
+			cred.setChecked(true);
+		}
+
+		if(cred.isChecked()){
+			
+	        myDB.execSQL("INSERT INTO "
+				       + "MyCred "
+				       + "(Field4) "
+				       + "VALUES ("+1+");");
+			
+			myDB.close();		
+		}
+		else{
+			
+	        myDB.execSQL("INSERT INTO "
+				       + "MyCred "
+				       + "(Field4) "
+				       + "VALUES ("+0+");");
+			
+			myDB.close();
+		}
+	}
+	
+	public int checkForSavedCred(){
+		int cred = 0;
+		
+		  SQLiteDatabase myDB = this.openOrCreateDatabase("RoamerDatabase", MODE_PRIVATE, null);
+		  Cursor c = myDB.rawQuery("SELECT * FROM " + "MyCred ", null);
+		  c.moveToFirst();
+
+		   int Column1 = c.getColumnIndex("Field4");
+		   cred = c.getInt(Column1);
+		   
+		return cred;
 	}
 }

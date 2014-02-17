@@ -28,7 +28,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/textViewAttend"
         android:gravity="center_vertical"
-        android:textColor="@color/DarkWhite" />
+        android:textColor="@color/Red" />
 
     <TextView
         android:id="@+id/textViewHost"
@@ -39,7 +39,7 @@
         android:layout_marginRight="37dp"
         android:layout_toLeftOf="@+id/textView4"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/DarkGrey"
+        android:textColor="@color/Red"
         android:textColorHint="@color/DarkWhite" />
 
     <ImageView
@@ -68,7 +68,7 @@
         android:layout_alignBaseline="@+id/textViewHost"
         android:layout_alignBottom="@+id/textViewHost"
         android:layout_alignLeft="@+id/textView4"
-        android:textColor="@color/DarkWhite" />
+        android:textColor="@color/Red" />
 
     <TextView
         android:id="@+id/textView3"

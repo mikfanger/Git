@@ -43,5 +43,6 @@
     <string name="title_activity_test_fixed_tab">TestFixedTabActivity</string>
     <string name="title_activity_total_event">TotalEventActivity</string>
     <string name="title_activity_roamer_profile">RoamerProfileActivity</string>
+    <string name="title_activity_create_event">CreateEventActivity</string>
 
 </resources>

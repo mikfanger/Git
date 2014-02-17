@@ -50,7 +50,12 @@ public class IntroActivity extends Activity {
         
         myDB.execSQL("CREATE TABLE IF NOT EXISTS "
                 + myCredTable
-                + " (Field1 VARCHAR, Field2 VARCHAR, Field3 VARCHAR);");
+                + " (Field1 VARCHAR, Field2 VARCHAR, Field3 VARCHAR, Field4 INT(1));");
+        
+        myDB.execSQL("INSERT INTO "
+			       + "MyCred "
+			       + "(Field1,Field2,Field3,Field4) "
+			       + "VALUES ('null','null','null',"+0+");");
         
        myDB.close();
         
