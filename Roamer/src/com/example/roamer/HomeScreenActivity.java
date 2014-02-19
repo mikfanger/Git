@@ -1,6 +1,7 @@
 package com.example.roamer;
 
 
+import com.example.roamer.checkinbox.ChatsAndRequestsActivity;
 import com.example.roamer.checkinbox.InboxActivity;
 import com.example.roamer.events.CreateEventActivity;
 import com.example.roamer.events.EventsActivity;
@@ -35,7 +36,7 @@ public class HomeScreenActivity extends Activity {
             @Override
             public void onClick(View v) {
             	
-            	Intent i=new Intent(HomeScreenActivity.this,InboxActivity.class);
+            	Intent i=new Intent(HomeScreenActivity.this,ChatsAndRequestsActivity.class);
                 startActivity(i);
             		  
             }

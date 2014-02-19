@@ -71,6 +71,8 @@ public class LoginActivity extends Activity {
 				       + "VALUES ('jon@roamer.com', 'roam' );");
 	        
 		   Cursor c = myDB.rawQuery("SELECT * FROM " + "MyCred" , null);
+		   
+		   System.out.println("Count of cred is: "+c.getCount());
 		   c.moveToFirst();
 		   
 		   int Column1 = c.getColumnIndex("Field1");
@@ -83,7 +85,10 @@ public class LoginActivity extends Activity {
 		   
 		   
 		   passWord = c.getString(Column2);
+		   System.out.println(passWord);
+		   
 		   userName = c.getString(Column1);
+		   System.out.println(userName);
 		  
 		   myDB.close();
 
@@ -196,6 +201,9 @@ public class LoginActivity extends Activity {
 		
 		//Check that email address match
 			if (!userName.equals(mEmail)) {
+				System.out.println("Entered email is: " + mEmail);
+				System.out.println("Valid email is: " + userName);
+				
 				mEmailView.setError("No record of email address");
 				focusView = mEmailView;
 				cancel = true;

@@ -44,5 +44,6 @@
     <string name="title_activity_total_event">TotalEventActivity</string>
     <string name="title_activity_roamer_profile">RoamerProfileActivity</string>
     <string name="title_activity_create_event">CreateEventActivity</string>
+    <string name="title_activity_chats_and_requests">ChatsAndRequestsActivity</string>
 
 </resources>

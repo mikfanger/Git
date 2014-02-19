@@ -43,7 +43,6 @@ public class CreateAccountActivity2 extends Activity {
 	            @Override
 	            public void onClick(View v) {
 	            	
-	            	v.performClick();
 	            	Intent i=new Intent(CreateAccountActivity2.this,CreateAccountActivity.class);
 	                startActivity(i);
 	            }
@@ -67,11 +66,11 @@ public class CreateAccountActivity2 extends Activity {
 	        position.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 	            public void onItemSelected(AdapterView<?> parent, View view,
 	                    int position, long id) {
-	                MyData d = items1[position];
+	               // MyData d = items1[position];
 
 	                //Get selected value of key 
-	                String value = d.getValue();
-	                String key = d.getSpinnerText();
+	                //String value = d.getValue();
+	                //String key = d.getSpinnerText();
 	            }
 
 				@Override
